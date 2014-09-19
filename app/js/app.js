@@ -12,7 +12,7 @@ var pitchApp = angular.module('pitchApp', ['ngRoute']);
 require('./controllers/admin-controller')(pitchApp);
 
 //services
-require('./services/skills-service')(pitchApp);
+require('./services/skills-server')(pitchApp);
 
 //here we configure its most basic router and basic controller
 //(there are other controllers for sub-parts of the app)
