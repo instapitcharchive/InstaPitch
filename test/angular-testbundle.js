@@ -9,8 +9,9 @@ require ("./../../bower_components/angular-route/angular-route.js");
 
 var pitchApp = angular.module('pitchApp', ['ngRoute']);
 
-//controller
+//controllers
 require('./controllers/admin-controller')(pitchApp);
+require('./controllers/pitch-controller')(pitchApp);
 
 //services
 require('./services/skills-server')(pitchApp);
@@ -20,8 +21,12 @@ require('./services/skills-server')(pitchApp);
 pitchApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'index.html',
+      templateUrl: '/views/nav-view.html',
       controller: 'pitchController'
+    })
+    .when('/admin', {
+      templateUrl: '/views/admin/admin-view.html',
+      controller: 'adminController'
     })
     .otherwise({
       redirectTo: '/'
@@ -30,7 +35,7 @@ pitchApp.config(['$routeProvider', function($routeProvider) {
 }]);
 
 
-},{"./../../bower_components/angular-route/angular-route.js":4,"./../../bower_components/angular/angular":5,"./controllers/admin-controller":2,"./services/skills-server":3}],2:[function(require,module,exports){
+},{"./../../bower_components/angular-route/angular-route.js":5,"./../../bower_components/angular/angular":6,"./controllers/admin-controller":2,"./controllers/pitch-controller":3,"./services/skills-server":4}],2:[function(require,module,exports){
 'use strict';
 
 module.exports = function(app) {
@@ -90,6 +95,17 @@ module.exports = function(app) {
 },{}],3:[function(require,module,exports){
 'use strict';
 
+//pitch controller stuff goes in here
+module.exports = function(app) {
+//what goes here?
+  app.controller('pitchController', function($scope) {
+    //pitch controller methods go here eventually
+  });
+};
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
 module.exports = function(app) {
   app.factory('skillsServer', function($http) {
 
@@ -145,7 +161,7 @@ module.exports = function(app) {
   });
 };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.25
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -1071,7 +1087,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.25
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -23096,7 +23112,7 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 require('../app/js/app.js'); //using browserify, so we can pull things in with require
@@ -23107,4 +23123,4 @@ describe('test is run', function() {
   });
 });
 
-},{"../app/js/app.js":1}]},{},[6]);
+},{"../app/js/app.js":1}]},{},[7]);

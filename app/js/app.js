@@ -8,8 +8,9 @@ require ('angular-route');
 
 var pitchApp = angular.module('pitchApp', ['ngRoute']);
 
-//controller
+//controllers
 require('./controllers/admin-controller')(pitchApp);
+require('./controllers/pitch-controller')(pitchApp);
 
 //services
 require('./services/skills-server')(pitchApp);
@@ -19,8 +20,12 @@ require('./services/skills-server')(pitchApp);
 pitchApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'index.html',
+      templateUrl: '/views/nav-view.html',
       controller: 'pitchController'
+    })
+    .when('/admin', {
+      templateUrl: '/views/admin/admin-view.html',
+      controller: 'adminController'
     })
     .otherwise({
       redirectTo: '/'
