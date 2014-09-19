@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           transform: ['debowerify'],
           debug: true
         },
-        src: ['test/angular/**/*test.js'],
+        src: ['test/*test.js'],
         dest: 'test/angular-testbundle.js'
       }
     },
