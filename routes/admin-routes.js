@@ -6,6 +6,7 @@ module.exports = function(app) {
   app.get(baseUrl, function(req, res){
     Skill.find({}, function(err, skills) {
       if (err) return res.status(500).json(err);
+      //return res.json({test: 'hi'});
       return res.json(skills);
     });
   });

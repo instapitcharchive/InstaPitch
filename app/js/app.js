@@ -15,6 +15,9 @@ require('./controllers/pitch-controller')(pitchApp);
 //services
 require('./services/skills-server')(pitchApp);
 
+//directive
+require('./directives/new-skill-form')(pitchApp);
+
 //here we configure its most basic router and basic controller
 //(there are other controllers for sub-parts of the app)
 pitchApp.config(['$routeProvider', function($routeProvider) {
@@ -30,6 +33,5 @@ pitchApp.config(['$routeProvider', function($routeProvider) {
     .otherwise({
       redirectTo: '/'
     });
-    //todo: need route support for admin
 }]);
 

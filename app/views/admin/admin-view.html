@@ -1,6 +1,8 @@
 <div data-ng-controller="adminController">
 
   <button data-ng-click="deleteAll()">Delete All</button>
+
+  <!-- this is an 'A'ttribute directive because it's embedded in the existing div tag -->
   <div data-new-skill-form></div>
 
   <div data-ng-repeat="skill in skills">
