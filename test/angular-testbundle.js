@@ -19,25 +19,11 @@ require('./services/skills-server')(pitchApp);
 //directive
 require('./directives/new-skill-form')(pitchApp);
 
-//here we configure its most basic router and basic controller
-//(there are other controllers for sub-parts of the app)
-pitchApp.config(['$routeProvider', function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: '/views/nav-view.html',
-      controller: 'pitchController'
-    })
-    .when('/admin', {
-      templateUrl: '/views/admin/admin-view.html',
-      controller: 'adminController'
-    })
-    .otherwise({
-      redirectTo: '/'
-    });
-}]);
+//routes
+require('./routes/pitch-routes')(pitchApp);
 
 
-},{"./../../bower_components/angular-route/angular-route.js":6,"./../../bower_components/angular/angular":7,"./controllers/admin-controller":2,"./controllers/pitch-controller":3,"./directives/new-skill-form":4,"./services/skills-server":5}],2:[function(require,module,exports){
+},{"./../../bower_components/angular-route/angular-route.js":7,"./../../bower_components/angular/angular":8,"./controllers/admin-controller":2,"./controllers/pitch-controller":3,"./directives/new-skill-form":4,"./routes/pitch-routes":5,"./services/skills-server":6}],2:[function(require,module,exports){
 'use strict';
 
 module.exports = function(app) {
@@ -95,13 +81,19 @@ module.exports = function(app) {
 };
 
 },{}],3:[function(require,module,exports){
+//pitch-controller.js
+
 'use strict';
 
 //pitch controller stuff goes in here
 module.exports = function(app) {
 //what goes here?
-  app.controller('pitchController', function($scope) {
+  app.controller('pitchController', function($scope, $location) {
     //pitch controller methods go here eventually
+    $scope.advanceToSkills = function() {
+      $location.path('/skill-select');
+    };
+
   });
 };
 
@@ -120,6 +112,41 @@ module.exports = function(app) {
 };
 
 },{}],5:[function(require,module,exports){
+//pitch-routes.js
+'use strict';
+
+module.exports = function(app) {
+
+  //pitchApp.config(['$routeProvider', function($routeProvider) {
+  app.config(function($routeProvider) {
+    $routeProvider
+
+      //default page
+      .when('/', {
+        templateUrl: '/views/public/pitch-main-view.html',
+        controller: 'pitchController'
+      })
+
+      //admin
+      .when('/admin', {
+        templateUrl: '/views/admin/admin-view.html',
+        controller: 'adminController'
+      })
+
+      //second page
+      .when('/skill-select', {
+        templateUrl: '/views/public/skill-select-view.html',
+        controller: 'pitchController'
+      })
+
+      //default to main
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
+};
+
+},{}],6:[function(require,module,exports){
 'use strict';
 
 module.exports = function(app) {
@@ -177,7 +204,7 @@ module.exports = function(app) {
   });
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.25
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -1103,7 +1130,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.25
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -23128,7 +23155,7 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 require('../app/js/app.js'); //using browserify, so we can pull things in with require
@@ -23139,4 +23166,4 @@ describe('test is run', function() {
   });
 });
 
-},{"../app/js/app.js":1}]},{},[8]);
+},{"../app/js/app.js":1}]},{},[9]);
