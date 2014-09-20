@@ -12,10 +12,10 @@ var pitchApp = angular.module('pitchApp', ['ngRoute']);
 //controllers
 require('./controllers/admin-controller')(pitchApp);
 require('./controllers/pitch-controller')(pitchApp);
+require('./controllers/skill-select-controller')(pitchApp);
 
 //services
 require('./services/skills-server')(pitchApp);
-require('./services/force-tree-service')(pitchApp);
 
 //directives
 require('./directives/new-skill-form')(pitchApp);
@@ -24,7 +24,7 @@ require('./directives/new-skill-form')(pitchApp);
 require('./routes/pitch-routes')(pitchApp);
 
 
-},{"./../../bower_components/angular-route/angular-route.js":8,"./../../bower_components/angular/angular":9,"./controllers/admin-controller":2,"./controllers/pitch-controller":3,"./directives/new-skill-form":4,"./routes/pitch-routes":5,"./services/force-tree-service":6,"./services/skills-server":7}],2:[function(require,module,exports){
+},{"./../../bower_components/angular-route/angular-route.js":9,"./../../bower_components/angular/angular":10,"./controllers/admin-controller":2,"./controllers/pitch-controller":3,"./controllers/skill-select-controller":4,"./directives/new-skill-form":5,"./routes/pitch-routes":6,"./services/skills-server":8}],2:[function(require,module,exports){
 'use strict';
 
 module.exports = function(app) {
@@ -102,6 +102,23 @@ module.exports = function(app) {
 };
 
 },{}],4:[function(require,module,exports){
+//pitch-controller.js
+
+'use strict';
+
+module.exports = function(app) {
+  app.controller('skillSelectController', function($scope, $location) {
+    require('../services/force-tree-service')(app);
+
+    $scope.advanceToPitch = function() {
+      $location.path('/write-pitch');
+      console.log("advance to pitch clicked");
+    };
+
+  });
+};
+
+},{"../services/force-tree-service":7}],5:[function(require,module,exports){
 'use strict';
 
 module.exports = function(app) {
@@ -115,7 +132,7 @@ module.exports = function(app) {
   });
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 //pitch-routes.js
 'use strict';
 
@@ -139,9 +156,10 @@ module.exports = function(app) {
       //second page
       .when('/skill-select', {
         templateUrl: '/views/public/skill-select-view.html',
-        controller: 'pitchController'
+        controller: 'skillSelectController'
       })
 
+      //third page
       .when('/write-pitch', {
         templateUrl: '/views/public/write-pitch-view.html',
         controller: 'pitchController'
@@ -154,7 +172,7 @@ module.exports = function(app) {
   });
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 require ("./../../../bower_components/d3/d3.js");
@@ -162,104 +180,43 @@ require ("./../../../bower_components/d3/d3.js");
 module.exports = function(app) {
   var nodes = [
     {"name": "Code Fellows Grad", "type" : "root", "size" : 20},
-      {"name": "Back End"},
-        {"name": "Sever Framework"},
-        {"name": "Database"},
-        {"name": "Architecture"},
-        {"name": "Testing"},
-      {"name": "Build Tools"},
-        {"name": "Grunt", "type" : "lib", "size" : 14},
-        {"name": "Browserify", "type" : "lib"},
-      {"name": "Soft Skills", "size" : 30},
+      {"name": "Back End"}, //1
+        {"name": "Database"}, //2
+        {"name": "Architecture"}, //3
+      {"name": "Soft Skills", "size" : 30}, //4
         {"name": "Organization", "type" : "lib"},
         {"name": "Written Communication", "type" : "lib"},
-      {"name": "Scaffolding"},
-        {"name": "Yeoman", "type" : "lib"},
-      {"name": "Front End"},
-        {"name": "MVC Frameworks"},
-          {"name": "Backbone", "type" : "lib"},
-          {"name": "Ember", "type" : "lib"},
-          {"name": "Angular", "type" : "lib"},
-          {"name": "React", "type" : "lib"},
-        {"name": "Templates"},
-          {"name": "Handlebars", "type" : "lib"},
-          {"name": "Jade", "type" : "lib"},
-        {"name": "Testing"},
-          {"name": "Casper", "type" : "lib"},
-          {"name": "Phantom", "type" : "lib"},
-        {"name": "Package Management"},
-          {"name": "Homebrew", "type" : "lib"},
-          {"name": "apt", "type" : "lib"},
-          {"name": "npm", "type" : "lib"},
-          {"name": "Bower", "type" : "lib"},
-          {"name": "Node", "type" : "lib"},
-          {"name": "Express", "type" : "lib"},
-          {"name": "Postres", "type" : "lib"},
-          {"name": "MySQL", "type" : "lib"},
-          {"name": "Mongo", "type" : "lib"},
-          {"name": "Redis", "type" : "lib"},
-          {"name": "REST", "type" : "lib"},
-          {"name": "SOAP", "type" : "lib"},
-          {"name": "Jasmine", "type" : "lib"},
-          {"name": "Mocha", "type" : "lib"},
-          {"name": "Chai", "type" : "lib"},
+        {"name": "Presentation", "type" : "lib"},
+        {"name": "Team Leadership", "type" : "lib"},
+      {"name": "Front End"}, //9
+        {"name": "MVC Frameworks"}, //10
+          {"name": "Backbone", "type" : "lib"}, //11
+          {"name": "Ember", "type" : "lib"}, //12
+          {"name": "Angular", "type" : "lib"}, //13
+          {"name": "React", "type" : "lib"}, //14
+      {"name": "Automated Testing"} //15
   ];
 
   var links = [
     {"source": 0, "target": 1},
-    {"source": 0, "target": 6},
+    {"source": 0, "target": 4},
     {"source": 0, "target": 9},
-    {"source": 0, "target": 12},
-    {"source": 0, "target": 14},
+    {"source": 0, "target": 15},
 
     {"source": 1, "target": 2},
     {"source": 1, "target": 3},
-    {"source": 1, "target": 4},
-    {"source": 1, "target": 5},
 
-    {"source": 2, "target": 31},
-    {"source": 2, "target": 32},
-
-    {"source": 3, "target": 33},
-    {"source": 3, "target": 34},
-    {"source": 3, "target": 35},
-    {"source": 3, "target": 36},
-
-    {"source": 4, "target": 37},
-    {"source": 4, "target": 38},
-
-    {"source": 5, "target": 39},
-    {"source": 5, "target": 40},
-    {"source": 5, "target": 41},
-
-    {"source": 6, "target": 7},
-    {"source": 6, "target": 8},
+    {"source": 4, "target": 5},
+    {"source": 4, "target": 6},
+    {"source": 4, "target": 7},
+    {"source": 4, "target": 8},
 
     {"source": 9, "target": 10},
-    {"source": 9, "target": 11},
 
-    {"source": 12, "target": 13},
-
-    {"source": 14, "target": 15},
-    {"source": 14, "target": 20},
-    {"source": 14, "target": 23},
-    {"source": 14, "target": 26},
-
-    {"source": 15, "target": 16},
-    {"source": 15, "target": 17},
-    {"source": 15, "target": 18},
-    {"source": 15, "target": 19},
-
-    {"source": 20, "target": 21},
-    {"source": 20, "target": 22},
-
-    {"source": 23, "target": 24},
-    {"source": 23, "target": 25},
-
-    {"source": 26, "target": 27},
-    {"source": 26, "target": 28},
-    {"source": 26, "target": 29},
-    {"source": 26, "target": 30}
+    {"source": 10, "target": 11},
+    {"source": 10, "target": 12},
+    {"source": 10, "target": 13},
+    {"source": 10, "target": 14},
   ];
 
   var width = 960,
@@ -269,7 +226,7 @@ module.exports = function(app) {
       .nodes(d3.values(nodes))
       .links(links)
       .size([width, height])
-      .linkDistance(60)
+      .linkDistance(40)
       .charge(-300)
       .on("tick", tick)
       .start();
@@ -295,15 +252,15 @@ module.exports = function(app) {
           d3.select(this).select("circle")
           .attr("class", "selected")
           .transition().duration(500)
-          .style('fill', 'steelblue');
+          .style('fill', 'red');
         }
       })
       .call(force.drag);
 
   node.append("circle")
       .attr("r", function(d){
-        if( !d.type ) return 4;
-        return d.size || 8;
+        if( !d.type ) return 14;
+        return d.size || 16;
       });
 
   node.append("text")
@@ -344,7 +301,7 @@ module.exports = function(app) {
   }
 }
 
-},{"./../../../bower_components/d3/d3.js":10}],7:[function(require,module,exports){
+},{"./../../../bower_components/d3/d3.js":11}],8:[function(require,module,exports){
 'use strict';
 
 module.exports = function(app) {
@@ -402,7 +359,7 @@ module.exports = function(app) {
   });
 };
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.25
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -1328,7 +1285,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.25
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -23353,7 +23310,7 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 !function() {
   var d3 = {
     version: "3.4.11"
@@ -32587,7 +32544,7 @@ var styleDirective = valueFn({
   if (typeof define === "function" && define.amd) define(d3); else if (typeof module === "object" && module.exports) module.exports = d3;
   this.d3 = d3;
 }();
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 require('../app/js/app.js'); //using browserify, so we can pull things in with require
@@ -32598,4 +32555,4 @@ describe('test is run', function() {
   });
 });
 
-},{"../app/js/app.js":1}]},{},[11]);
+},{"../app/js/app.js":1}]},{},[12]);

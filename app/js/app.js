@@ -11,10 +11,10 @@ var pitchApp = angular.module('pitchApp', ['ngRoute']);
 //controllers
 require('./controllers/admin-controller')(pitchApp);
 require('./controllers/pitch-controller')(pitchApp);
+require('./controllers/skill-select-controller')(pitchApp);
 
 //services
 require('./services/skills-server')(pitchApp);
-require('./services/force-tree-service')(pitchApp);
 
 //directives
 require('./directives/new-skill-form')(pitchApp);

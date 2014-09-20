@@ -21,9 +21,10 @@ module.exports = function(app) {
       //second page
       .when('/skill-select', {
         templateUrl: '/views/public/skill-select-view.html',
-        controller: 'pitchController'
+        controller: 'skillSelectController'
       })
 
+      //third page
       .when('/write-pitch', {
         templateUrl: '/views/public/write-pitch-view.html',
         controller: 'pitchController'
