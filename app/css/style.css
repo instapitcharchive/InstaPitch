@@ -7,3 +7,50 @@ html {
   background-color:#ddd;
   color:red;
 }
+
+.pitchInput {
+  width:300px;
+  height:300px;
+}
+
+.pitchHelp {
+  width:300px;
+}
+
+.pitchWrite {
+  border:1px solid red;
+}
+
+/* Force tree styles */
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: #aaa;
+  stroke-width: 1.5px;
+}
+
+.node circle.selected, .node.lib circle {
+  fill: #555;
+}
+.node.root circle {
+  fill: steelblue;
+}
+
+.node text {
+  font: 8px sans-serif;
+  fill: #aaa;
+  pointer-events: none;
+}
+.node.lib text{
+  fill: #345763;
+  font-size: 10px;
+}
+.node.root text{
+  fill: #345763;
+  font-size: 16px;
+}

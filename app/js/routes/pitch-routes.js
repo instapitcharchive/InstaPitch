@@ -3,7 +3,6 @@
 
 module.exports = function(app) {
 
-  //pitchApp.config(['$routeProvider', function($routeProvider) {
   app.config(function($routeProvider) {
     $routeProvider
 
@@ -22,6 +21,11 @@ module.exports = function(app) {
       //second page
       .when('/skill-select', {
         templateUrl: '/views/public/skill-select-view.html',
+        controller: 'pitchController'
+      })
+
+      .when('/write-pitch', {
+        templateUrl: '/views/public/write-pitch-view.html',
         controller: 'pitchController'
       })
 

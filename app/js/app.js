@@ -14,8 +14,9 @@ require('./controllers/pitch-controller')(pitchApp);
 
 //services
 require('./services/skills-server')(pitchApp);
+require('./services/force-tree-service')(pitchApp);
 
-//directive
+//directives
 require('./directives/new-skill-form')(pitchApp);
 
 //routes

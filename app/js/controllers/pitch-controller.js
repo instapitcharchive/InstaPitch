@@ -2,13 +2,16 @@
 
 'use strict';
 
-//pitch controller stuff goes in here
 module.exports = function(app) {
-//what goes here?
   app.controller('pitchController', function($scope, $location) {
-    //pitch controller methods go here eventually
+
+    //these methods get called by buttons inside templates
     $scope.advanceToSkills = function() {
       $location.path('/skill-select');
+    };
+
+    $scope.advanceToPitch = function() {
+      $location.path('/write-pitch');
     };
 
   });
