@@ -9,7 +9,7 @@ module.exports = function(app) {
       console.log(status);
     };
 
-    var parseSkill = function(note) {
+    var parseSkill = function(skill) {
       return {skillBody: skill.skillBody}; //okay to return obj literal if can do it on one line
     };
 
