@@ -1,0 +1,5 @@
+<form name="newskillform">
+  <input type="text" required data-ng-model="newSkill.skillBody">
+  <label data-ng-show="newskillform.$dirty && newskillform.$invalid">Skill can't be blank</label>
+  <button data-ng-disabled="newskillform.$invalid" data-ng-click="saveNewSkill()">Save Skill</button>
+</form>

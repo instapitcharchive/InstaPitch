@@ -1,0 +1,42 @@
+{
+  "name": "InstaPitch",
+  "version": "1.0.0",
+  "description": "InstaPitch: The Custom Pitch Creator ====================================== You know you need a pitch that showcases your unique skills and abilities. This app fulfills that need.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/instapitch/InstaPitch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/instapitch/InstaPitch/issues"
+  },
+  "homepage": "https://github.com/instapitch/InstaPitch",
+  "devDependencies": {
+    "debowerify": "^0.8.1",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.0.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.4.19",
+    "grunt-karma": "^0.9.0",
+    "grunt-mocha": "^0.4.11",
+    "grunt-simple-mocha": "^0.4.0",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-safari-launcher": "^0.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.8.3",
+    "mongoose": "^3.8.16"
+  }
+}
