@@ -4,7 +4,6 @@
 
 module.exports = function(app) {
   app.controller('skillSelectController', function($scope, $location, userInputService, skillsServer) {
-    //require('../services/force-tree-service')(app);
 
     $scope.advanceToPitch = function() {
       if ($scope.skillsSelectedNum === 3) {
