@@ -20,37 +20,3 @@ html {
 .pitchWrite {
   border:1px solid red;
 }
-
-/* Force tree styles */
-.link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 1.5px;
-}
-
-.node circle {
-  fill: #fff;
-  stroke: #aaa;
-  stroke-width: 1.5px;
-}
-
-.node circle.selected, .node.lib circle {
-  fill: #555;
-}
-.node.root circle {
-  fill: red;
-}
-
-.node text {
-  font: 12px sans-serif;
-  fill: #aaa;
-  pointer-events: none;
-}
-.node.lib text{
-  fill: #345763;
-  font-size: 12px;
-}
-.node.root text{
-  fill: #345763;
-  font-size: 16px;
-}
