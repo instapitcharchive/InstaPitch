@@ -7,11 +7,11 @@ module.exports = function(app) {
     //require('../services/force-tree-service')(app);
 
     $scope.advanceToPitch = function() {
-      if ($scope.skillsSelected.length === 3) {
+      if ($scope.skillsSelectedNum === 3) {
           $location.path('/write-pitch');
           console.log("advance to pitch clicked");
         } else {
-          //alert("select 3 skills!");
+          console.log("skillsSelectedNum " + $scope.skillsSelectedNum);
         }
     };
 
@@ -27,13 +27,17 @@ module.exports = function(app) {
     $scope.getAllSkills();
 
     $scope.skillsSelected = {};
+    $scope.skillsSelectedNum = 0;
 
     $scope.checkboxSelect = function(skill) {
-      if ($scope.skillsSelected[skill]) { //if this skill is already in the object
-        delete $scope.skillsSelected.skill; //remove it from object
+      if ($scope.skillsSelected[skill] == true) { //if this skill is already in the object
+        delete $scope.skillsSelected[skill]; //remove it from object
+        $scope.skillsSelectedNum -= 1;
         console.log("removing " + skill);
       } else {
-        $scope.skillsSelected[skill];
+        $scope.skillsSelected[skill] = true;
+        console.log($scope.skillsSelected);
+        $scope.skillsSelectedNum += 1;
         console.log("adding " + skill);
       }
     };
