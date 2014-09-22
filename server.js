@@ -4,22 +4,15 @@ var mongoose = require('mongoose');
 var http = require('http');
 var app = express();
 
-mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/skills-development');
+app.use(express.static(__dirname + '/build'));
 
-app.use(express.static(__dirname + (process.env.STATIC_DIR || '/build')));
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/skills-development');
 
 app.use(bodyparser.json());
 require('./routes/admin-routes')(app);
 
-
-/*
-//Old Code
 var server = http.createServer(app);
 
-server.listen(process.env.PORT || 3000, function() {
-  console.log("Your Excellency, your server is ready and waiting on port 3000.");
-});
-*/
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
