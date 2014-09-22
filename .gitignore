@@ -25,7 +25,6 @@ build/Release
 node_modules
 app/bower_components
 bower_components
-app/.DS_Store
 build
 test/angular-testbundle.js
-app/js/.DS_Store
+.DS_Store
