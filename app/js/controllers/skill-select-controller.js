@@ -11,7 +11,7 @@ module.exports = function(app) {
           $location.path('/write-pitch');
           console.log("advance to pitch clicked");
         } else {
-          alert("select 3 skills!");
+          //alert("select 3 skills!");
         }
     };
 
