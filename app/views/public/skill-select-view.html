@@ -1,5 +1,12 @@
 <div>
+Hello, {{username}}!
+</br>
 Choose your 3 strongest skills and qualities:
-  <button data-ng-click="advanceToPitch()">Next</button>
   <div id="treeContainer"></div>
+
+  <div data-ng-repeat="skill in skills">
+    <input type="checkbox" data-ng-click="checkboxSelect(skill.skillBody)">{{skill.skillBody}}
+  </div>
+  <button data-ng-checked="advanceToPitch()">Next</button>
+
 </div>

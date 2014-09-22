@@ -15,6 +15,7 @@ require('./controllers/skill-select-controller')(pitchApp);
 
 //services
 require('./services/skills-server')(pitchApp);
+require('./services/user-input-service')(pitchApp);
 
 //directives
 require('./directives/new-skill-form')(pitchApp);
