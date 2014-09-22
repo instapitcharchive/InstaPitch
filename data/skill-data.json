@@ -1,0 +1,132 @@
+{
+  "name" : "Code Fellows Grad",
+  "children" : [
+    {
+      "name" : "Back End",
+      "children" : [
+        {
+          "name" : "Server Frameworks",
+          "children" : [
+            { "name" : "Node" },
+            { "name" : "Express" },
+            { "name" : "Sails" },
+            { "name" : "Geddy" }
+          ]
+        },
+        {
+          "name" : "Databases",
+          "children" :[
+            {
+              "name" : "SQL",
+              "children" : [
+                { "name" : "PostgreSQL" },
+                { "name" : "MySQL" }
+              ]
+            },
+            {
+              "name" : "NoSQL",
+              "children" : [
+                { "name" : "Mongo" },
+                { "name" : "Redis" }
+              ]
+            }
+          ]
+        },
+        {
+          "name" : "Testing" ,
+          "children" : [
+            { "name" : "Cucumber" },
+            { "name" : "Jasmine" },
+            { "name" : "Mocha" },
+            { "name" : "Q-Unit" },
+            {
+              "name" : "Assertion Libraries",
+              "children" : [
+                { "name" : "Chai" },
+                { "name" : "Jasmine" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "Build Tools",
+      "children" : [
+        { "name" : "Grunt" },
+        { "name" : "Gulp" },
+        { "name" : "Broswerify" },
+        { "name" : "Uglify" },
+        { "name" : "Jake" },
+        { "name" : "Broccoli" }
+      ]
+    },
+    {
+      "name" : "Functional Libraries",
+      "children" : [
+        { "name" : "Underscore" },
+        { "name" : "Lodash" }
+      ]
+    },
+    {
+      "name" : "Front End",
+      "children" : [
+        {
+          "name" : "Testing",
+          "children" : [
+            { "name" : "Casper" },
+            { "name" : "Zombie" },
+            { "name" : "Phantom" }
+          ]
+        },
+        {
+          "name" : "Templates",
+          "children" : [
+            { "name" : "Underscore" },
+            { "name" : "Handlebars" },
+            { "name" : "Mustache" },
+            { "name" : "Jade" },
+            { "name" : "Haml" },
+            { "name" : "Eco" }
+          ]
+        },
+        {
+          "name" : "MVC Frameworks",
+          "children" : [
+            { "name" : "Backbone" },
+            { "name" : "Angular" },
+            { "name" : "Ember" },
+            { "name" : "Knockout" }
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "Scaffolding",
+      "children" : [
+        { "name" : "Yeoman" },
+        { "name" : "New Node" }
+      ]
+    },
+    {
+      "name" : "Package Management",
+      "children" : [
+        { "name" : "Homebrew" },
+        { "name" : "apt" },
+        { "name" : "npm" },
+        { "name" : "Bower" }
+      ]
+    },
+    {
+      "name" : "Soft Skills",
+      "children" : [
+        { "name" : "Team leadership" },
+        { "name" : "Documentation" },
+        { "name" : "Organization" },
+        { "name" : "Planning" },
+        { "name" : "Estimation" },
+        { "name" : "Written communication" }
+      ]
+    }
+  ]
+}
