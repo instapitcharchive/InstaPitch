@@ -12,6 +12,7 @@ module.exports = function(app) {
 
   app.post(baseUrl, function(req, res) {
     var skill = new Skill(req.body);
+    console.dir(skill);
     skill.save(function(err, resSkill) {
       if (err) return res.status(500).json(err);
       return res.send(resSkill);

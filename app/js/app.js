@@ -19,7 +19,7 @@ require('./services/user-input-service')(pitchApp);
 
 //directives
 require('./directives/new-skill-form')(pitchApp);
-
+require('./directives/edit-skill-form')(pitchApp);
 //routes
 require('./routes/pitch-routes')(pitchApp);
 

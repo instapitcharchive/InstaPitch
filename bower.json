@@ -15,8 +15,5 @@
   ],
   "devDependencies": {
     "angular-route": "~1.2.25"
-  },
-  "dependencies": {
-    "d3": "~3.4.11"
   }
 }

@@ -3,6 +3,18 @@
 module.exports = function(app) {
   app.controller('adminController', function($scope, skillsServer) {
 
+    $scope.skillTypes = [
+      {name:'trait', type:'trait'},
+      {name:'skill (general)', type:'skillgeneral'},
+      {name:'Full Stack JavaScript', type:'js'},
+      {name:'iOS', type:'ios'},
+      {name:'Python', type:'python'},
+      {name:'Front-End UX Design', type:'ux'},
+      {name:'Ruby', type:'ruby'}
+    ];
+
+    $scope.defaultSkillType = $scope.skillTypes[0];
+
     $scope.getAllSkills = function() {
      skillsServer.index()
       .success(function(data) {
@@ -13,7 +25,8 @@ module.exports = function(app) {
     $scope.getAllSkills();
 
     $scope.saveNewSkill = function() {
-      skillsServer.saveNewSkill($scope.newSkill)
+      skillsServer.saveNewSkill($scope.newSkill) //doesn't pull in type data
+      //map the input data to a string
         .success(function(data) {
           $scope.skills.push(data);
         });

@@ -1,12 +1,13 @@
 //pitch-controller.js
 
+
 'use strict';
 
 module.exports = function(app) {
   app.controller('pitchController', function($scope, $location, userInputService) {
 
     $scope.username = userInputService.get();
-    //these methods get called by buttons inside templates
+
     $scope.advanceToSkills = function() {
       $location.path('/skill-select');
       userInputService.set($scope.username);
@@ -16,5 +17,16 @@ module.exports = function(app) {
       $location.path('/write-pitch');
     };
 
+    $scope.majors = [
+      {name:'Full Stack JavaScript'},
+      {name:'iOS'},
+      {name:'Python'},
+      {name:'Front-End UX Design'},
+      {name:'Ruby'}
+    ];
+
+    $scope.defaultMajor = $scope.majors[0];
+
   });
 };
+

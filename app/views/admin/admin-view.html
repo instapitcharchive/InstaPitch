@@ -1,8 +1,7 @@
 <div data-ng-controller="adminController">
-
   <button data-ng-click="deleteAll()">Delete All</button>
 
-  <!-- this is an 'A'ttribute directive because it's embedded in the existing div tag -->
+  <!--new skill form here-->
   <div data-new-skill-form></div>
 
   <!-- for each skill, make a div -->
@@ -12,23 +11,7 @@
       save="saveSkill"
       delete="deleteSkill">
 
-        <!-- edit existing skill -->
-        <div data-ng-show="skill.editing">
-          <form name="skillform">
-            <label data-ng-show="skillform.$invalid">Skill field can't be blank</label>
-            <input required data-ng-model="skill.skillBody"/>
-            <button data-ng-disabled="skillform.$invalid" data-ng-click="saveSkill(skill)">Save Changes</button>
-            <!--cancel edit button-->
-            <button data-ng-click="cancelEdit(skill, skillForm)">Cancel</button>
-          </form>
+      <!-- edit template is handled by a directive-->
+      <div data-edit-skill-form></div>
 
-        </div>
-
-        <div data-ng-hide="skill.editing">
-          {{skill.skillBody}} <!-- added filter here day 3 -->
-          <button data-ng-click="editSkill(skill)">Edit Skill</button>
-          <button data-ng-click="deleteSkill(skill)">Delete Skill</button>
-        </div>
-
-  </div>
 </div>
