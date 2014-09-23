@@ -1,5 +1,15 @@
-<form name="newskillform">
-  <input type="text" required data-ng-model="newSkill.skillBody">
-  <label data-ng-show="newskillform.$dirty && newskillform.$invalid">Skill can't be blank</label>
-  <button data-ng-disabled="newskillform.$invalid" data-ng-click="saveNewSkill()">Save Skill</button>
-</form>
+<div>
+  <form name="newskillform">
+    <!--text input-->
+    <input type="text" required data-ng-model="newSkill.skillBody">
+    <!-- skill type dropdown-->
+    <select data-ng-model="newSkill.skillType"
+            ng-options="skillType.name for skillType in skillTypes">
+            </select>
+
+    <!-- warning labels-->
+    <label data-ng-show="newskillform.$dirty && newskillform.$invalid" class="redText">Skill can't be blank</label>
+    <button data-ng-disabled="newskillform.$invalid" data-ng-click="saveNewSkill()">Save Skill</button>
+
+  </form>
+</div>

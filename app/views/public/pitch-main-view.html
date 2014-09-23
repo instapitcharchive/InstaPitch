@@ -3,15 +3,9 @@
   <h2>Sell yourself and your skills with a great pitch!</h2>
   <p>Code Fellows</p>
   <form>
-    <input data-ng-model="username" placeholder="Your name"/>
+    <input required data-ng-model="username" placeholder="Your name"/>
     You are a
-    <select>
-      <option value="javascript">Full Stack JavaScript</option>
-      <option value="ux">Front-End UX Design</option>
-      <option value="python">Python</option>
-      <option value="ruby">Ruby</option>
-      <option value="ios">iOS</option>
-    </select>
+    <select data-ng-model="usermajor" ng-options="major.name for major in majors"></select>
     developer
   </form>
   <button data-ng-click="advanceToSkills()">Next</button>

@@ -14,7 +14,19 @@ module.exports = function(app) {
         }
     };
 
-    $scope.username = userInputService.get();
+    $scope.username = userInputService.get("username");
+    $scope.usermajor = userInputService.get("usermajor");
+
+    $scope.filterFn = function(skill) {
+      if (skill.skillType == "skillgeneral" || skill.skillType == "trait") {
+        return true;
+      }
+
+      if (skill.skillType == $scope.usermajor.type) {
+        return true; //include in results
+      }
+      return false; //if it doesn't match major, don't include in results
+    }
 
     $scope.getAllSkills = function() {
       skillsServer.index()
@@ -40,6 +52,8 @@ module.exports = function(app) {
         console.log("adding " + skill);
       }
     };
+
+
 
   });
 };

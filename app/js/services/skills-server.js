@@ -10,7 +10,10 @@ module.exports = function(app) {
     };
 
     var parseSkill = function(skill) {
-      return {skillBody: skill.skillBody}; //okay to return obj literal if can do it on one line
+      console.log(skill.skillType.type);
+      return {skillBody: skill.skillBody,
+              skillType: skill.skillType.type
+            };
     };
 
     var skill = {

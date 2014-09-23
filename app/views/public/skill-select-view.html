@@ -1,10 +1,12 @@
 <div>
-Hello, {{username}}!
+Welcome {{username}}, {{usermajor.name}} developer extraordinaire.
 </br>
 Choose your 3 strongest skills and qualities:
 
-  <div data-ng-repeat="skill in skills">
-    <input type="checkbox" data-ng-click="checkboxSelect(skill.skillBody)">{{skill.skillBody}}
+  <div data-ng-repeat="skill in skills | filter:filterFn"><!-- filter goes here -->
+    <input  type="checkbox"
+            data-ng-click="checkboxSelect(skill.skillBody)">
+            {{skill.skillBody}} ( {{skill.skillType}} )
   </div>
   <button data-ng-click="advanceToPitch()">Next</button>
 
