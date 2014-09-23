@@ -2,12 +2,12 @@
 
 module.exports = function(app) {
   app.factory('userInputService', function() {
-    var savedData = '';
-    function set(data) {
-      savedData = data;
+    var savedData = {};
+    function set(key, data) {
+      savedData[key] = data;
     }
-    function get() {
-      return savedData;
+    function get(key) {
+      return savedData[key];
     }
 
     return {

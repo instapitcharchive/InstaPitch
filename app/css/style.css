@@ -3,6 +3,23 @@ html {
   background-color:#ddd;
 }
 
+/* CMS */
+.skillBox {
+  background-color:#eee;
+  border:1px solid gray;
+  margin:10px;
+  padding:10px;
+}
+
+.redText {
+  color:red;
+}
+
+.skillTypeText {
+  color:gray;
+}
+
+/* main */
 .skillButton {
   background-color:#ddd;
   color:red;

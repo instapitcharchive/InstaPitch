@@ -10,7 +10,8 @@ module.exports = function(app) {
 
     $scope.advanceToSkills = function() {
       $location.path('/skill-select');
-      userInputService.set($scope.username);
+      userInputService.set("username",$scope.username);
+      userInputService.set("usermajor",$scope.usermajor);
     };
 
     $scope.advanceToPitch = function() {
@@ -18,14 +19,14 @@ module.exports = function(app) {
     };
 
     $scope.majors = [
-      {name:'Full Stack JavaScript'},
-      {name:'iOS'},
-      {name:'Python'},
-      {name:'Front-End UX Design'},
-      {name:'Ruby'}
+      {name:'Full Stack JavaScript',type:'js'},
+      {name:'iOS',type:'ios'},
+      {name:'Python',type:'python'},
+      {name:'Front-End UX Design',type:'ux'},
+      {name:'Ruby',type:'ruby'}
     ];
 
-    $scope.defaultMajor = $scope.majors[0];
+    $scope.usermajor = $scope.majors[0];
 
   });
 };

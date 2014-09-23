@@ -2,13 +2,15 @@
     <div data-ng-show="skill.editing">
 
       <form name="skillform">
-        <label data-ng-show="skillform.$invalid">Skill field can't be blank</label>
+        <label data-ng-show="skillform.$invalid" class="redText">Skill field can't be blank</label>
         <!-- edit skill name -->
         <input required data-ng-model="skill.skillBody"/>
         <!-- edit skill type via a dropdown -->
         <select data-ng-model="skill.skillType"
                 data-ng-options="skillType.name for skillType in skillTypes">
-                </select>
+                <!-- sets the default value of the dropdown to the saved skillType -->
+                <option value="">{{skill.skillType}}</option>
+        </select>
 
         <button data-ng-disabled="skillform.$invalid"
                 data-ng-click="saveSkill(skill)">Save Changes
@@ -22,8 +24,7 @@
 
 
     <div data-ng-hide="skill.editing">
-      {{skill.skillBody}}
-      {{skill.skillType.type}} <!-- added filter here day 3 -->
+      {{skill.skillBody}} <span class="skillTypeText">[ {{skill.skillType}} ]</span>
       <button data-ng-click="editSkill(skill)">Edit Skill</button>
       <button data-ng-click="deleteSkill(skill)">Delete Skill</button>
     </div>

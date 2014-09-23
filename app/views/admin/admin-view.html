@@ -1,17 +1,20 @@
 <div data-ng-controller="adminController">
-  <button data-ng-click="deleteAll()">Delete All</button>
 
   <!--new skill form here-->
+  </br>
+  Add a new skill/trait:
   <div data-new-skill-form></div>
 
   <!-- for each skill, make a div -->
-  <div data-ng-repeat="skill in skills">
-    <div data-editable
-      object="skill"
-      save="saveSkill"
-      delete="deleteSkill">
 
-      <!-- edit template is handled by a directive-->
-      <div data-edit-skill-form></div>
+  <div data-ng-repeat="skill in skills" class="skillBox">
+    <!-- aparently, this line doesn't do anything? -->
+    <!-- <div data-editable object="skill" save="saveSkill" delete="deleteSkill"> -->
 
+        <!-- edit template is handled by a directive-->
+        <div data-edit-skill-form></div>
+    </div><!-- closes editable object div-->
+  </div><!-- closes skillBox-->
+
+  <button data-ng-click="deleteAll()">Delete All</button>
 </div>
