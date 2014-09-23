@@ -26,8 +26,12 @@ module.exports = function(app) {
       {name:'Ruby',type:'ruby'}
     ];
 
-    $scope.usermajor = $scope.majors[0];
     $scope.username = userInputService.get("username");
+    $scope.usermajor = userInputService.get("usermajor");
+
+    if ($scope.usermajor != null) {
+      console.log("usermajor is " + $scope.usermajor.name);
+    }
 
   });
 };
