@@ -27,6 +27,7 @@ module.exports = function(app) {
     ];
 
     $scope.usermajor = $scope.majors[0];
+    $scope.username = userInputService.get("username");
 
   });
 };
