@@ -6,9 +6,6 @@ var browsers = ['PhantomJS'];
   if ( /^win/.test(process.platform) ) {
     browsers.push('IE');
   }
-  if ( /^darwin/.test(process.platform) ) {
-    browsers.push('Safari');
-  }
   if (process.env.TRAVIS ) {
     browsers = ['PhantomJS'];
   }

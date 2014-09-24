@@ -45,7 +45,6 @@ module.exports = function(grunt) {
     karma: {
       unit: {
         configFile: 'karma.conf.js',
-        background: true
       }
     },
 
@@ -81,6 +80,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build',['clean:dev','browserify:dev', 'copy:dev']);
   grunt.registerTask('test', ['browserify:angulartest','karma:unit']);
   grunt.registerTask('serve', ['express:dev','watch:express']);
-  grunt.registerTask('default',['build','serve']);
+  grunt.registerTask('default',['test', 'build','serve']);
 
 };
