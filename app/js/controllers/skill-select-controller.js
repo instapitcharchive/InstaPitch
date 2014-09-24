@@ -19,6 +19,7 @@ module.exports = function(app) {
     $scope.username = userInputService.get("username");
     $scope.usermajor = userInputService.get("usermajor");
 
+    //may not be used
     //checkbox validation
     //http://stackoverflow.com/questions/24451164/calculate-number-of-checked-checkbox-in-angularjs
     $scope.checkedCount = function() {
