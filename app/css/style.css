@@ -104,6 +104,10 @@ div.main-form {
   color:gray;
 }
 
+.green {
+    color: green;
+}
+
 /* main */
 .skillButton {
   background-color:#ddd;

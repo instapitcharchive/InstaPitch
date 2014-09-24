@@ -10,7 +10,6 @@ module.exports = function(app) {
     };
 
     var parseSkill = function(skill) {
-      console.log(skill.skillType.type);
       return {skillBody: skill.skillBody,
               skillType: skill.skillType.type
             };

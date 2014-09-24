@@ -9,7 +9,7 @@ module.exports = function(app) {
       //default page
       .when('/', {
         templateUrl: '/views/public/pitch-main-view.html',
-        controller: 'pitchController'
+        controller: 'pitchMainController'
       })
 
       //admin
@@ -27,7 +27,7 @@ module.exports = function(app) {
       //third page
       .when('/write-pitch', {
         templateUrl: '/views/public/write-pitch-view.html',
-        controller: 'pitchController'
+        controller: 'writePitchController'
       })
 
       //default to main
