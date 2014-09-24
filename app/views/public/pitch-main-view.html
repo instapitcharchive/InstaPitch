@@ -6,7 +6,8 @@
   <form>
     <input required data-ng-model="username" placeholder="Your name"/>
     You are a
-    <select required data-ng-model="usermajor"
+    <select required
+            data-ng-model="usermajor"
             ng-options="major.name for major in majors"
             ng-init="usermajor ? 'usermajor.name' : test">
       <option value="">-- choose accelerator --</option>
@@ -14,5 +15,5 @@
 
     developer
   </form>
-  <button data-ng-click="advanceToSkills()">Next</button>
+  <button data-ng-click="advanceToSkills()" data-ng-disabled="!usermajor">Next</button>
 </div>
