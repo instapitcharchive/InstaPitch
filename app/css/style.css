@@ -105,7 +105,7 @@ div.main-form {
 }
 */
 
-<<<<<<< HEAD
+
 html, body {
   padding: 0;
   margin: 0;
@@ -131,7 +131,7 @@ h2.hgroup {
 
 .write {
   font-size: 1em;
-  margin-right: 1em;
+  margin-right: 50em 10em 10em 10em;
 }
 
 header hgroup {
@@ -150,25 +150,30 @@ header hgroup {
 
 }
 
-.custom-dropdown {
+.name, .custom-dropdown {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 0 0 40%;
+  margin: 0 0 0 0%;
+
 }
 
-.custom-dropdown select {
+.name, .custom-dropdown select  {
   background-color: #1abc9c;
   color: #fff;
   font-size: inherit;
   padding: .5em;
   padding-right: 2.5em;
   border: 0;
-  margin: 0;
+  margin: 0 0 0 5em;
   border-radius: 3px;
   text-indent: 0.01px;
   text-overflow: '';
   -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+option {
+  margin: 2 0 0 2em;
 }
 
 .custom-dropdown::before,

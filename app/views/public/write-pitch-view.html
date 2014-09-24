@@ -1,4 +1,4 @@
-<div class="col span_1_of_3">
+<!-- div class="col span_1_of_3">
   <h1 class="write">Incorporate your Strengths</h1>
   <ul>
       <li class="section-buttons-a b">{{Skill 1}}</li>
@@ -12,7 +12,8 @@
 
 <div class="col span_2_of_3">
   <h1>Write your pitch!</h1>
-  <textarea rows=5 cols=50 class="m-contact-form--comment" placeholder="I am..."></textarea>
+  <textarea rows=5 cols=50 class="m-contact-for
+  comment" placeholder="I am..."></textarea>
   Example generator:
   <div>
     <ul>
@@ -21,24 +22,7 @@
     </ul>
   </div>
   <button>Refresh</button>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div> -->
 
 
 <!-- <div class="pitchHelp">
@@ -46,7 +30,11 @@
 
   <!-- loop through the saved skills -->
   <!-- here we can assume the object contains the correct number of skills -->
-  <div data-ng-repeat="userskill in userskills" ng-class="{green:userskill.found}">
+
+<div class="col span_1_of_3">
+  <h1 class="write">Incorporate your Strengths</h1>
+
+  <div section-buttons-a b data-ng-repeat="userskill in userskills" ng-class="{green:userskill.found}">
     {{userskill.skillBody}}
   </div>
 
@@ -56,7 +44,7 @@
 </div>
 
 
-<div class="pitchWrite">
+<div class="col span_2_of_3 pitchWrite">
   <h1>Write your pitch!</h1>
   <!-- needs an ng-model and ng-change which calls a function -->
   <input  data-ng-model="pitchText"
@@ -72,3 +60,36 @@
   </div>
   <button>Refresh</button>
 </div> -->
+
+
+
+
+ <!-- loop through the saved skills -->
+  <!-- here we can assume the object contains the correct number of skills -->
+  <!-- <div data-ng-repeat="userskill in userskills" ng-class="{green:userskill.found}">
+    {{userskill.skillBody}}
+  </div>
+
+  <!-- visual prompt -->
+<!--   <h2>What will people remember about you?</h2>
+  I want people to say I am _________.
+</div>
+
+ -->
+<!-- <div class="pitchWrite">
+  <h1>Write your pitch!</h1> --> <!-- -->
+  <!-- needs an ng-model and ng-change which calls a function -->
+  <!-- <input  data-ng-model="pitchText"
+          data-ng-change="scanPitchText()"
+          class="pitchInput">
+
+  Example generator:
+  <div>
+    <ul>
+      <li>Okay: "I know some jQuery"</li>
+      <li><b>Strong: I built an app using jQuery</b></li>
+    </ul>
+  </div>
+  <button>Refresh</button>
+</div> -->
+
