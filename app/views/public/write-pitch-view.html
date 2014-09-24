@@ -47,9 +47,8 @@
 <div class="col span_2_of_3 pitchWrite">
   <h1>Write your pitch!</h1>
   <!-- needs an ng-model and ng-change which calls a function -->
-  <input  data-ng-model="pitchText"
-          data-ng-change="scanPitchText()"
-          class="pitchInput">
+  <textarea rows=10 cols=70 data-ng-model="pitchText" data-ng-change="scanPitchText()" class="textarea-finalpitch">
+  </textarea>
 
   Example generator:
   <div>
