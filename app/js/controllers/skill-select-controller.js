@@ -1,32 +1,32 @@
-//pitch-controller.js
-
+//skill-select-controller.js
 'use strict';
 
 module.exports = function(app) {
   app.controller('skillSelectController', function($scope, $location, userInputService, skillsServer) {
 
-    $scope.advanceToPitch = function() {
-      if ($scope.skillsSelectedNum === 3) {
-          $location.path('/write-pitch');
-          console.log("advance to pitch clicked");
-        } else {
-          console.log("skillsSelectedNum " + $scope.skillsSelectedNum);
-        }
+    $scope.skillsSelected = {};
+    $scope.skillsSelectedNum = 0;
+
+    var skillsRequired = 3;
+    $scope.advanceToPitch = function(skillsform) {
+      if ($scope.skillsSelectedNum === skillsRequired) {
+        userInputService.set("userskills",$scope.skillsSelected);
+        console.log("$scope.skillsSelected contains: " + $scope.skillsSelected);
+        $location.path('/write-pitch');
+      }
     };
 
     $scope.username = userInputService.get("username");
     $scope.usermajor = userInputService.get("usermajor");
 
-    $scope.filterFn = function(skill) {
-      if (skill.skillType == "skillgeneral" || skill.skillType == "trait") {
-        return true;
-      }
-
-      if (skill.skillType == $scope.usermajor.type) {
-        return true; //include in results
-      }
-      return false; //if it doesn't match major, don't include in results
-    }
+    //may not be used
+    //checkbox validation
+    //http://stackoverflow.com/questions/24451164/calculate-number-of-checked-checkbox-in-angularjs
+    $scope.checkedCount = function() {
+      return $scope.data.filter(function(skill) {
+        return skill.checked;
+      }).length;
+    };
 
     $scope.getAllSkills = function() {
       skillsServer.index()
@@ -37,23 +37,18 @@ module.exports = function(app) {
 
     $scope.getAllSkills();
 
-    $scope.skillsSelected = {};
-    $scope.skillsSelectedNum = 0;
+    $scope.checkboxSelect = function(input) {
+      console.log("selecting a checkbox: " + input.skillBody);
 
-    $scope.checkboxSelect = function(skill) {
-      if ($scope.skillsSelected[skill] == true) { //if this skill is already in the object
-        delete $scope.skillsSelected[skill]; //remove it from object
+      if ($scope.skillsSelected[input.skillBody] == input) { //if this skill is already in the object
         $scope.skillsSelectedNum -= 1;
-        console.log("removing " + skill);
-      } else {
-        $scope.skillsSelected[skill] = true;
-        console.log($scope.skillsSelected);
+        delete $scope.skillsSelected[input.skillBody]; //remove it from object
+        console.log("removing " + input.skillBody);
+      } else { //add it to the object
         $scope.skillsSelectedNum += 1;
-        console.log("adding " + skill);
+        $scope.skillsSelected[input.skillBody] = input;
+        console.log("adding " + input.skillBody + " to $scope.skillsSelected: " + $scope.skillsSelected[input.skillBody]["skillBody"]);
       }
     };
-
-
-
   });
 };

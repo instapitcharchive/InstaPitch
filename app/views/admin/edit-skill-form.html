@@ -8,8 +8,6 @@
         <!-- edit skill type via a dropdown -->
         <select data-ng-model="skill.skillType"
                 data-ng-options="skillType.name for skillType in skillTypes">
-                <!-- sets the default value of the dropdown to the saved skillType -->
-                <option value="">{{skill.skillType}}</option>
         </select>
 
         <button data-ng-disabled="skillform.$invalid"
@@ -17,7 +15,7 @@
                 </button>
 
         <!--cancel edit button-->
-        <button data-ng-click="cancelEdit(skill, skillForm)">Cancel</button>
+        <button data-ng-click="cancelEdit(skill, skillform)">Cancel</button>
       </form>
 
     </div>
