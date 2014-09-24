@@ -1,4 +1,6 @@
 //major-filter.js
+//this filter returns a list of PROGRAMMING-related skills
+//example: all the "ruby" skills and the general coding skills, like "debugging"
 'use strict';
 
 module.exports = function(app) {
@@ -13,7 +15,7 @@ module.exports = function(app) {
           filtered.push(skill);
         }
 
-        if(skill.skillType == "skillgeneral" || userSelectedMajor.type == "trait") {
+        if(skill.skillType == "skillgeneral") {
           filtered.push(skill);
         }
 
