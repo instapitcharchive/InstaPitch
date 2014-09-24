@@ -1,58 +1,3 @@
-<!--
-<!-- drop down menu - put on main
-<h2 class="header" >Choose Your Track</h2>
-<span class="custom-dropdown">
-    <select>
-        <option>JavaScript</option>
-        <option>UX</option>
-        <option>Python</option>
-        <option>Ruby</option>
-        <option>Web Dev Full Stack</option>
-    </select>
-</span>
-<!-- end drop down menu test --> -->
-
-
-<section class="section-buttons">
-  <h2 class="main-buttons">These are my strongest...</h2>
-  <div class="col span_1_of_2">
-  <h3 class="main-buttons">Choose Five Skills</h3>
-  <ul>
-    <li><a href="#" class="section-buttons-a">+ Object Oriented Modeling</a></li>
-    <li><a href="#" class="section-buttons-a">+ Optimizing Performance</a></li>
-    <li><a href="#" class="section-buttons-a">+ Behavior Driven Development</a></li>
-  </ul>
-    </div>
-  <div class="col span_2_of_2">
-  <h3 class="main-buttons">Choose Five Personal Traits</h3>
-  <ul>
-    <li><a href="#" class="section-buttons-a">+ Analytical Problem Solving</a></li>
-    <li><a href="#" class="section-buttons-a">+ Team Leadership</a></li>
-    <li><a href="#" class="section-buttons-a">+ Flexible & Adaptable</a></li>
-  </ul>
-    </div>
-  </section>
-
-<div>
-Welcome {{username}}, {{usermajor.name}} developer extraordinaire.
-</br>
-Choose your 3 strongest skills and qualities:
-
-  <div class="section-buttons-a" data-ng-repeat="skill in skills | filter:filterFn">
-    <input  type="checkbox"
-            data-ng-click="checkboxSelect(skill.skillBody)"
-            />
-            {{skill.skillBody}} ( {{skill.skillType}} )
-
-  </div>
-  <button data-ng-click="advanceToPitch()">Next</button>
-
-</div>
-</div>
-
-
-
-
 
 
 <div>
@@ -63,8 +8,8 @@ Choose your 3 strongest skills and qualities:
   <form name="skillsForm" ng-submit="advanceToPitch()">
     <div data-ng-repeat="skill in skills | filterByMajor:usermajor">
       <!-- take in an array and filter the array, return the array -->
-      <label class="checkbox">
-      <input  type="checkbox"
+      <label class="section-buttons-1" class="checkbox">
+      <input type="checkbox"
               value="{{skill.skillBody}}"
               ng-change="checkboxSelect(skill)"
               ng-model="skill.checked"

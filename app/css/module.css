@@ -1,0 +1,315 @@
+/*header*/
+.top-bar {
+  color: white;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  text-transform: uppercase;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+.top-bar-logo-insta {
+  text-align: center;
+  font: 1em "Silverfake";
+  display: block;
+  float:left;
+  margin: 1% 0 0 1%;
+}
+
+.top-bar-logo-pitch {
+    text-align: center;
+    font: 2em "Average", serif;
+}
+.top-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-admin {
+  float: right;
+  margin-right: 1em;
+}
+.nav-admin a {
+  color: orange;
+}
+
+
+/*main*/
+article {
+  display: block;
+  position: relative;
+  margin: 0;
+  background-color: yellow;
+  background: url("../images/office_space.jpg") center no-repeat;
+  height: 500px;
+}
+
+.about{}
+
+.content{}
+
+/*floated section*/
+
+section {
+  display: inline-block;
+  text-align: justify;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  color: #fff;
+  border: 5px solid #fff;
+  padding: 0em 1em;
+  line-height: 1.2;
+  font-size: 1em;
+  background-color: rgba(0, 50, 20, 0.5);
+}
+
+
+.section-h2 {
+  text-align: center;
+  color: yellow;
+  opacity: .8;
+}
+
+section p {
+  font-weight: 900;
+}
+
+h2.hgroup {
+  text-align: center;
+  color: ;
+  opacity: .8;
+}
+
+
+/*dropdown*/
+
+.name, .custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 0%;
+
+}
+
+.name, .custom-dropdown select  {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0 0 0 5em;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.cust2elect[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.4);
+}
+
+/*nav*/
+
+/*button column*/
+
+.main-buttons {
+  text-align: center;
+}
+
+h2.main-buttons {
+  color: #342B56;
+}
+
+h3.main-buttons {
+  color: #BFAC36;
+  background-color: ;
+  margin-top: -1em;
+}
+
+.b {
+ width: 10em;
+
+
+/*textbox*/
+
+
+
+html {
+  background-color:#ddd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+/*HIDDEN ELEMENTS*/
+.isHidden {
+  display: none;
+}
+
+/*HEADER WITH IMAGE AND APP DESCRIPTION*/
+
+
+
+/*MAIN FORM USERNAME AND MAJOR*/
+div.main-form {
+  margin-top: 10px;
+  padding-left: 6em;
+}
+
+/*FIXED HEADER BAR*/
+
+
+/* CMS */
+/*.*//*skillBox {
+  background-color:#eee;
+  border:1px solid gray;
+  margin:10px;
+  padding:10px;
+}
+
+.redText {
+  color:red;
+}
+
+.skillTypeText {
+  color:gray;
+}
+*/
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  font: 1em/1.5 "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+
+body {
+  font-size: 1.3em;
+}
+
+
+.write {
+  font-size: 1em;
+  margin-right: 50em 10em 10em 10em;
+}
+
+option {
+  margin: 2 0 0 2em;
+}
+
+
+/*MAIN*/
+
+
+/*BUTTON STYLE*/
+
+li {
+  list-style-type: none;
+}
+
+.section-buttons{
+  margin-top: 4em;
+
+}
+.section-buttons-a {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background: #35292D;
+  width: 20em;
+    /* Font styles */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-buttons-a:hover {
+  background: #725963;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content:"";
+  display:table;
+}
+.group:after {
+  clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+  width: 100%;
+}
+.span_2_of_3 {
+  width: 66.1%;
+}
+.span_1_of_3 {
+  width: 32.2%;
+}
+
+

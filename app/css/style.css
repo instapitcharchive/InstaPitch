@@ -89,7 +89,7 @@ div.main-form {
 }
 
 /* CMS */
-/*.*//*skillBox {
+.skillBox {
   background-color:#eee;
   border:1px solid gray;
   margin:10px;
@@ -103,14 +103,18 @@ div.main-form {
 .skillTypeText {
   color:gray;
 }
-*/
 
+.green{
+ color:green;
+}
 
 html, body {
   padding: 0;
   margin: 0;
   height: 100%;
 }
+
+
 
 html {
   font: 1em/1.5 "Lato", sans-serif;
@@ -242,7 +246,7 @@ li {
   margin-top: 4em;
 
 }
-.section-buttons-a {
+.section-buttons-1 {
   display: inline-block;
   padding: 10px;
   margin: 10px;
@@ -253,6 +257,9 @@ li {
   font-weight: bold;
   text-decoration: none;
 
+}
+.ctest{
+  background-color: red;
 }
 
 .b {
