@@ -127,6 +127,10 @@ div.main-form {
   border:1px solid red;
 }
 
+.pushDown {
+  height:60px;
+}
+
 /* skills select - should be relocated when skills selectors are added to this file */
 /* feel free to change/remove these to suit the final styling - mandi */
 .skillsLeft {
