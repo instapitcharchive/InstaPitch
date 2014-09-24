@@ -1,10 +1,13 @@
 <div class="pitchHelp">
   <h1>Incorporate your Strengths</h1>
-  <ul>
-      <li>{{Skill 1}}</li>
-      <li>{{Skill 2}}</li>
-      <li>{{Skill 3}}</li>
-  </ul>
+
+  <!-- loop through the saved skills -->
+  <!-- here we can assume the object contains the correct number of skills -->
+  <div data-ng-repeat="userskill in userskills">
+    {{userskill.skillBody}}
+  </div>
+
+  <!-- visual prompt -->
   <h2>What will people remember about you?</h2>
   I want people to say I am _________.
 </div>
