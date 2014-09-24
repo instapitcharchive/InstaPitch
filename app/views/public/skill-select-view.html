@@ -4,17 +4,36 @@ Welcome {{username}}, {{usermajor.name}} developer extraordinaire.
 Choose your 3 strongest skills and qualities:
 
   <form name="skillsForm" ng-submit="advanceToPitch()">
-    <div data-ng-repeat="skill in skills | filterByMajor:usermajor">
-      <!-- take in an array and filter the array, return the array -->
-      <label class="checkbox">
-      <input  type="checkbox"
-              value="{{skill.skillBody}}"
-              ng-change="checkboxSelect(skill)"
-              ng-model="skill.checked"
-              name="group-skills"
-              />
-              {{skill.skillBody}} ( {{skill.skillType}} )
+
+    <!-- this section is for major-specific skills (ios, ruby, etc) and general coding skills (debugging) -->
+    <div class="skillsLeft">
+      <div data-ng-repeat="skill in skills | filterByMajor:usermajor">
+        <label class="checkbox">
+        <input  type="checkbox"
+                value="{{skill.skillBody}}"
+                ng-change="checkboxSelect(skill)"
+                ng-model="skill.checked"
+                name="group-skills"
+                />
+                {{skill.skillBody}} ( {{skill.skillType}} )
       </div>
+    </div>
+
+    <!-- this section is just for "personality" traits and soft skills -->
+    <div class="skillsRight">
+      <div data-ng-repeat="skill in skills | filterByTrait">
+        <label class="checkbox">
+        <input  type="checkbox"
+                value="{{skill.skillBody}}"
+                ng-change="checkboxSelect(skill)"
+                ng-model="skill.checked"
+                name="group-skills"
+                />
+                {{skill.skillBody}} ( {{skill.skillType}} )
+      </div>
+    </div>
+
+    <!-- input button is disabled until (any) three skills are selected -->
     <input type="submit" value="Next" ng-disabled="skillsSelectedNum != 3"/>
   </form>
   total checked: {{ skillsSelectedNum }}
