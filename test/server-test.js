@@ -1,6 +1,6 @@
-'use strict';
-
-require('../app/js/app.js'); //using browserify, so we can pull things in with require
+//using browserify, so we can pull things in with require
+require('../app/js/app.js');
+require('angular-mocks');
 
 describe('test is run', function() {
   it('should run this test file', function() {

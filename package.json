@@ -1,17 +1,19 @@
 {
   "name": "InstaPitch",
   "version": "1.0.0",
-  "description": "InstaPitch: The Custom Pitch Creator ====================================== You know you need a pitch that showcases your unique skills and abilities. This app fulfills that need.",
-  "main": "server.js",
+  "description": "InstaPitch: The Custom Pitch Creator",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "grunt test",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/instapitch/InstaPitch.git"
   },
-  "author": "",
+  "author": [
+    "Mandi Grant <mandi018@gmail.com>",
+    "Livingston Martin <livingston@drmartin.com>"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/instapitch/InstaPitch/issues"
@@ -37,6 +39,8 @@
   },
   "dependencies": {
     "body-parser": "^1.8.3",
+    "express": "^4.9.4",
+    "grunt-cli": "^0.1.13",
     "mongoose": "^3.8.16"
   }
 }

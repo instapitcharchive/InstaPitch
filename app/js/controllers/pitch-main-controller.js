@@ -1,7 +1,5 @@
-//pitch-controller.js
-
-
 //pitch-main-controller.js
+
 'use strict';
 
 module.exports = function(app) {
