@@ -8,10 +8,15 @@ require ('angular-route');
 
 var pitchApp = angular.module('pitchApp', ['ngRoute']);
 
+//filters
+require('./filters/major-filter')(pitchApp);
+require('./filters/selected-skills-filter')(pitchApp);
+
 //controllers
 require('./controllers/admin-controller')(pitchApp);
 require('./controllers/pitch-controller')(pitchApp);
 require('./controllers/skill-select-controller')(pitchApp);
+
 
 //services
 require('./services/skills-server')(pitchApp);

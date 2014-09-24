@@ -4,12 +4,12 @@ Welcome {{username}}, {{usermajor.name}} developer extraordinaire.
 Choose your 3 strongest skills and qualities:
 
   <form name="skillsForm" ng-submit="advanceToPitch()">
-    <div data-ng-repeat="skill in skills | filter:filterFn"><!-- filter goes here -->
+    <div data-ng-repeat="skill in skills | filterByMajor:usermajor">
+      <!-- take in an array and filter the array, return the array -->
       <label class="checkbox">
       <input  type="checkbox"
-              required="required"
               value="{{skill.skillBody}}"
-              ng-change="checkboxSelect(skill.skillBody)"
+              ng-change="checkboxSelect(skill)"
               ng-model="skill.checked"
               name="group-skills"
               />
@@ -17,5 +17,5 @@ Choose your 3 strongest skills and qualities:
       </div>
     <input type="submit" value="Next" ng-disabled="skillsForm.$invalid"/>
   </form>
-
+  total checked: {{ skillsSelectedNum }}
 </div>
