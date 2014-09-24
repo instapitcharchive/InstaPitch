@@ -210,6 +210,7 @@ option {
   color: rgba(0,0,0,.3);
 }
 
+<<<<<<< HEAD
 .custom-dropdown select[disabled]::after {
   color: rgba(0,0,0,.1);
 }
@@ -308,3 +309,28 @@ li {
 }
 
 
+=======
+.pushDown {
+  height:60px;
+}
+
+/* skills select - should be relocated when skills selectors are added to this file */
+/* feel free to change/remove these to suit the final styling - mandi */
+.skillsLeft {
+  border:1px solid blue;
+  width:45%;
+  display:block;
+  float:left;
+}
+
+.skillsRight {
+  border:1px solid red;
+  width:45%;
+  display:block;
+  float:left;
+}
+
+.skillsNext {
+  clear:both;
+}
+>>>>>>> c086b4b1673a4275f2b647987d1920f0672779b0
