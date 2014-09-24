@@ -1,6 +1,91 @@
-/* just some dev colors to see if styles are working */
 html {
   background-color:#ddd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+/*HIDDEN ELEMENTS*/
+.isHidden {
+  display: none;
+}
+
+/*HEADER WITH IMAGE AND APP DESCRIPTION*/
+
+
+article {
+  display: block;
+  position: relative;
+  margin: 0;
+  background-color: yellow;
+  background: url("../images/office_space.jpg") center no-repeat;
+  height: 500px;
+}
+
+section {
+  display: inline-block;
+  text-align: justify;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  color: #fff;
+  border: 5px solid #fff;
+  padding: 0em 1em;
+  line-height: 1.2;
+  font-size: 1em;
+  background-color: rgba(0, 50, 20, 0.5);
+}
+
+.section-h2 {
+  text-align: center;
+  color: yellow;
+  opacity: .8;
+}
+
+section p {
+  font-weight: 900;
+}
+
+/*MAIN FORM USERNAME AND MAJOR*/
+div.main-form {
+  margin-top: 10px;
+  padding-left: 6em;
+}
+
+/*FIXED HEADER BAR*/
+.top-bar {
+  color: white;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  text-transform: uppercase;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+.top-bar-logo-insta {
+  text-align: center;
+  font: 1em "Silverfake";
+  display: block;
+  float:left;
+  margin: 1% 0 0 1%;
+}
+
+.top-bar-logo-pitch {
+    text-align: center;
+    font: 2em "Average", serif;
+}
+.top-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-admin {
+  float: right;
+  margin-right: 1em;
+}
+.nav-admin a {
+  color: orange;
 }
 
 /* CMS */

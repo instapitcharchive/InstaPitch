@@ -6,19 +6,16 @@
 <head>
   <meta charset="UTF-8">
   <title>InstaPitch!</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
   <div data-ng-app="pitchApp">
-    <div>
-      <nav>
-        <ul>
-          <li><a href="#/">Back to Main</a></li>
-          <li><a href="#/admin">Admin</a></li>
-        </ul>
-      </nav>
-    </div>
+  <nav role="banner" class="top-bar">
+    <h1 class="top-bar-logo-insta">
+    <a href="#/">INSTA<span class="top-bar-logo-pitch">PITCH</span></a></h1>
+    <div class="nav-admin"><a href="#/admin">Admin</a></div>
+  </nav>
 
     <!--container for app -->
     <div data-ng-view></div>
