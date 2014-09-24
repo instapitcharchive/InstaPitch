@@ -1,9 +1,9 @@
+<div class="admin-wrapper">
 <div data-ng-controller="adminController">
 
   <!--new skill form here-->
-  </br>
   Add a new skill/trait:
-  <div data-new-skill-form></div>
+  <div data-new-skill-form>
 
   <!-- for each skill, make a div -->
   <div data-ng-repeat="skill in skills" class="skillBox">
@@ -13,8 +13,10 @@
 
         <!-- edit template is handled by a directive-->
         <div data-edit-skill-form></div>
-    </div><!-- closes editable object div-->
-  </div><!-- closes skillBox-->
+    </div><!-- closes skill in skills skillBox-->
+  </div><!-- closes data-new-skill-form -->
 
   <button data-ng-click="deleteAll()">Delete All</button>
-</div>
+
+</div> <!-- Closes adminController -->
+</div> <!-- Closes admin-wrapper -->

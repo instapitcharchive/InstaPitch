@@ -126,3 +126,11 @@ div.main-form {
 .pitchWrite {
   border:1px solid red;
 }
+
+
+/*Admin Controller Styling*/
+.admin-wrapper {
+  float: left;
+  background: red;
+  margin-top: 80px;
+}
