@@ -10,7 +10,6 @@ var pitchApp = angular.module('pitchApp', ['ngRoute']);
 
 //filters
 require('./filters/major-filter')(pitchApp);
-require('./filters/selected-skills-filter')(pitchApp);
 
 //controllers
 require('./controllers/admin-controller')(pitchApp);
