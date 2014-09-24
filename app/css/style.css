@@ -126,3 +126,23 @@ div.main-form {
 .pitchWrite {
   border:1px solid red;
 }
+
+/* skills select - should be relocated when skills selectors are added to this file */
+/* feel free to change/remove these to suit the final styling - mandi */
+.skillsLeft {
+  border:1px solid blue;
+  width:45%;
+  display:block;
+  float:left;
+}
+
+.skillsRight {
+  border:1px solid red;
+  width:45%;
+  display:block;
+  float:left;
+}
+
+.skillsNext {
+  clear:both;
+}

@@ -11,7 +11,7 @@ module.exports = function(app) {
       var filtered = [];
       angular.forEach(skills, function(skill) {
 
-        if(userSelectedMajor.type == "trait") {
+        if(skill.skillType == "trait") {
           filtered.push(skill);
         }
 
