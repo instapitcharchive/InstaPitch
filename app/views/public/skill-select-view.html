@@ -57,14 +57,22 @@ Choose your 3 strongest skills and qualities:
 
 <div>
 Welcome {{username}}, {{usermajor.name}} developer extraordinaire.
-</br>
+</br></br>
 Choose your 3 strongest skills and qualities:
 
-  <div data-ng-repeat="skill in skills | filter:filterFn"><!-- filter goes here -->
-    <input  type="checkbox"
-            data-ng-click="checkboxSelect(skill.skillBody)">
-            {{skill.skillBody}} ( {{skill.skillType}} )
-  </div>
-  <button data-ng-click="advanceToPitch()">Next</button>
-
+  <form name="skillsForm" ng-submit="advanceToPitch()">
+    <div data-ng-repeat="skill in skills | filterByMajor:usermajor">
+      <!-- take in an array and filter the array, return the array -->
+      <label class="checkbox">
+      <input  type="checkbox"
+              value="{{skill.skillBody}}"
+              ng-change="checkboxSelect(skill)"
+              ng-model="skill.checked"
+              name="group-skills"
+              />
+              {{skill.skillBody}} ( {{skill.skillType}} )
+      </div>
+    <input type="submit" value="Next" ng-disabled="skillsSelectedNum != 3"/>
+  </form>
+  total checked: {{ skillsSelectedNum }}
 </div>

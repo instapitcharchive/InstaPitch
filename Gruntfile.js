@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       dev: {
         expand: true,
         cwd: 'app/',  //current working directory
-        src: ['*.html', 'css/*.css', 'views/**/*.html'],
+        src: ['*.html', 'css/*.css', 'views/**/*.html', 'images/*.jpg'],
         dest: 'build/',
         filter: 'isFile'
       }
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           transform: ['debowerify'],
           debug: true
         },
-        src: ['test/*test.js'],
+        src: ['test/**/*test.js'],
         dest: 'test/angular-testbundle.js'
       }
     },
