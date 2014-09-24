@@ -11,22 +11,12 @@ module.exports = function(app) {
     $scope.advanceToPitch = function(skillsform) {
       if ($scope.skillsSelectedNum === skillsRequired) {
         userInputService.set("userskills",$scope.skillsSelected);
-        console.log("$scope.skillsSelected contains: " + $scope.skillsSelected);
         $location.path('/write-pitch');
       }
     };
 
     $scope.username = userInputService.get("username");
     $scope.usermajor = userInputService.get("usermajor");
-
-    //may not be used
-    //checkbox validation
-    //http://stackoverflow.com/questions/24451164/calculate-number-of-checked-checkbox-in-angularjs
-    $scope.checkedCount = function() {
-      return $scope.data.filter(function(skill) {
-        return skill.checked;
-      }).length;
-    };
 
     $scope.getAllSkills = function() {
       skillsServer.index()

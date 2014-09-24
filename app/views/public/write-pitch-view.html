@@ -3,7 +3,7 @@
 
   <!-- loop through the saved skills -->
   <!-- here we can assume the object contains the correct number of skills -->
-  <div data-ng-repeat="userskill in userskills">
+  <div data-ng-repeat="userskill in userskills" ng-class="{green:userskill.found}">
     {{userskill.skillBody}}
   </div>
 
@@ -15,7 +15,11 @@
 
 <div class="pitchWrite">
   <h1>Write your pitch!</h1>
-  <input class="pitchInput">
+  <!-- needs an ng-model and ng-change which calls a function -->
+  <input  data-ng-model="pitchText"
+          data-ng-change="scanPitchText()"
+          class="pitchInput">
+
   Example generator:
   <div>
     <ul>
