@@ -1,3 +1,24 @@
+/*General Styles*/
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  font: 1em/1.5 "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  font-size: 1.3em;
+}
+
+
+
 /*header*/
 .top-bar {
   color: white;
@@ -35,6 +56,7 @@
 
 
 /*main*/
+
 article {
   display: block;
   position: relative;
@@ -107,6 +129,10 @@ h2.hgroup {
   -webkit-appearance: button; /* hide default arrow in chrome OSX */
 }
 
+option {
+  margin: 2 0 0 2em;
+}
+
 .custom-dropdown::before,
 .custom-dropdown::after {
   content: "";
@@ -170,89 +196,7 @@ h3.main-buttons {
 .b {
  width: 10em;
 
-
-/*textbox*/
-
-
-
-html {
-  background-color:#ddd;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
-}
-
-/*HIDDEN ELEMENTS*/
-.isHidden {
-  display: none;
-}
-
-/*HEADER WITH IMAGE AND APP DESCRIPTION*/
-
-
-
-/*MAIN FORM USERNAME AND MAJOR*/
-div.main-form {
-  margin-top: 10px;
-  padding-left: 6em;
-}
-
-/*FIXED HEADER BAR*/
-
-
-/* CMS */
-/*.*//*skillBox {
-  background-color:#eee;
-  border:1px solid gray;
-  margin:10px;
-  padding:10px;
-}
-
-.redText {
-  color:red;
-}
-
-.skillTypeText {
-  color:gray;
-}
-*/
-
-
-html, body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-
-html {
-  font: 1em/1.5 "Lato", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
-}
-
-
-body {
-  font-size: 1.3em;
-}
-
-
-.write {
-  font-size: 1em;
-  margin-right: 50em 10em 10em 10em;
-}
-
-option {
-  margin: 2 0 0 2em;
-}
-
-
-/*MAIN*/
-
-
-/*BUTTON STYLE*/
-
-li {
+ li {
   list-style-type: none;
 }
 
@@ -278,6 +222,29 @@ li {
   font-weight: bold;
   text-decoration: none;
 }
+
+
+/*writecolumn*/
+
+.write {
+  font-size: 1em;
+  margin-right: 50em 10em 10em 10em;
+}
+
+
+/*textbox*/
+.pitchWrite{
+
+}
+
+/*HIDDEN ELEMENTS*/
+.isHidden {
+  display: none;
+}
+
+
+
+/*Skeleton styles below*/
 
 /*  COLUMN SETUP  */
 .col {
@@ -312,4 +279,63 @@ li {
   width: 32.2%;
 }
 
+/*Admin*/
+.skillBox {
+  background-color:#eee;
+  border:1px solid gray;
+  margin:10px;
+  padding:10px;
+}
+
+.redText {
+  color:red;
+}
+
+.skillTypeText {
+  color:gray;
+}
+
+
+/*html {
+  background-color:#ddd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}*/
+
+/*MAIN FORM USERNAME AND MAJOR
+div.main-form {
+  margin-top: 10px;
+  padding-left: 6em;
+}
+*/
+/*FIXED HEADER BAR*/
+
+
+/* CMS */
+/*
+*/
+
+/*General styles */
+
+
+/*/* skills select - should be relocated when skills selectors are added to this file */
+/* feel free to change/remove these to suit the final styling - mandi */
+/*.skillsLeft {
+  border:1px solid blue;
+  width:45%;
+  display:block;
+  float:left;
+}
+
+.skillsRight {
+  border:1px solid red;
+  width:45%;
+  display:block;
+  float:left;
+}
+
+.skillsNext {
+  clear:both;
+}
 

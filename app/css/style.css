@@ -133,9 +133,30 @@ h2.hgroup {
   opacity: .8;
 }
 
+.write4 {
+  font-size: 1.3em;
+  margin: 0em 0em 2em 2em;
+
+}
+
+.write3 {
+  font-size: 1.3em;
+  margin: 0em 0em 0em 2em;
+
+}
+
+.write2{
+font-size: 1.3em;
+margin: 0em 0em 0em 2em;
+
+
+}
+
+
 .write {
   font-size: 1em;
-  margin-right: 50em 10em 10em 10em;
+  margin: 2em 0em 0em 2em;
+  background-color: purples;
 }
 
 header hgroup {
@@ -210,7 +231,7 @@ option {
   color: rgba(0,0,0,.3);
 }
 
-<<<<<<< HEAD
+
 .custom-dropdown select[disabled]::after {
   color: rgba(0,0,0,.1);
 }
@@ -247,27 +268,57 @@ li {
   margin-top: 4em;
 
 }
-.section-buttons-1 {
+.section-buttons-a {
   display: inline-block;
   padding: 10px;
   margin: 10px;
   background: #35292D;
-  width: 20em;
+  width: 10em;
     /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
 
 }
-.ctest{
-  background-color: red;
+
+.section-buttons-b {
+ display: inline-block;
+  padding: 10px;
+  margin: 2em 0em 0em 2em;
+  background: #35292D;
+  width: 10em;
+    /* Font styles */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.testgreen {
+ display: inline-block;
+  padding: 10px;
+  margin: 2em 0em 0em 2em;
+  background-color: blue;
+  width: 10em;
+    /* Font styles */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lmargin {
+  margin: 0em 0em -1em 1.2em;
 }
 
 .b {
  width: 10em;
-
-
 }
+
+textarea {
+  font-size: 1em;
+  margin-top: 0em;
+}
+
+
 
 .section-buttons-a:hover {
   background: #725963;
@@ -275,6 +326,30 @@ li {
   font-weight: bold;
   text-decoration: none;
 }
+
+.section-buttons-b:hover {
+  background: #725963;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-buttons-c:hover {
+  background: #725963;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*Text Box*/
+
+.textarea-finalpitch{
+  background-color:;
+  margin: 3em 2em 2em 2em;
+  padding-left: 4em;
+}
+
+
 /*  COLUMN SETUP  */
 .col {
   display: block;
@@ -313,6 +388,12 @@ li {
 .pushDown {
   height:60px;
 }
+
+.push {
+  margin-top: 5em;
+  height: 5em;
+}
+
 
 /* skills select - should be relocated when skills selectors are added to this file */
 /* feel free to change/remove these to suit the final styling - mandi */
