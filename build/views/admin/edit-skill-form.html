@@ -1,0 +1,28 @@
+<!-- edit existing skill -->
+<div data-ng-show="skill.editing">
+
+  <form name="skillform">
+    <label data-ng-show="skillform.$invalid" class="redText">Skill field can't be blank</label>
+    <!-- edit skill name -->
+    <input required data-ng-model="skill.skillBody"/>
+    <!-- edit skill type via a dropdown -->
+    <select data-ng-model="skill.skillType"
+            data-ng-options="skillType.name for skillType in skillTypes">
+    </select>
+
+    <button data-ng-disabled="skillform.$invalid"
+            data-ng-click="saveSkill(skill)">Save Changes
+            </button>
+
+    <!--cancel edit button-->
+    <button data-ng-click="cancelEdit(skill, skillform)">Cancel</button>
+  </form>
+
+</div>
+
+
+<div data-ng-hide="skill.editing">
+  {{skill.skillBody}} <span class="skillTypeText">[ {{skill.skillType}} ]</span>
+  <button data-ng-click="editSkill(skill)">Edit Skill</button>
+  <button data-ng-click="deleteSkill(skill)">Delete Skill</button>
+</div>
