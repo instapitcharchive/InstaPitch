@@ -6,12 +6,6 @@ module.exports = function(app) {
       $cookies.jwt = null;
     }
 
-    //if no cookies.jwt OR cookies.jwt.length >= 10
-    /*if(!$cookies.jwt || $cookies.jwt.length >= 10) {
-      return $location.path('/admin');
-    }
-*/
-
     if($location.path() === '/signup') {
       $scope.newuser = true;
     }
@@ -37,7 +31,6 @@ module.exports = function(app) {
     };
 
     $scope.createNewUser = function() {
-      console.log('clicked');
       $http({
         method: 'POST',
         url: '/api/v_0_0_1/users',
