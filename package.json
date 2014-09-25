@@ -38,9 +38,14 @@
     "karma-safari-launcher": "^0.1.1"
   },
   "dependencies": {
+    "bcrypt-nodejs": "latest",
     "body-parser": "^1.8.3",
     "express": "^4.9.4",
     "grunt-cli": "^0.1.13",
-    "mongoose": "^3.8.16"
+    "jwt-simple": "latest",
+    "moment": "^2.8.3",
+    "mongoose": "^3.8.16",
+    "passport": "^0.2.1",
+    "passport-http": "^0.2.2"
   }
 }

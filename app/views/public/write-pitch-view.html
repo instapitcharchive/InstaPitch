@@ -17,10 +17,15 @@
   <h1>Write your pitch!</h1>
   <!-- needs an ng-model and ng-change which calls a function -->
   <input  data-ng-model="pitchText"
-          data-ng-change="scanPitchText()"
+          data-ng-change="updateTextBox()"
           class="pitchInput">
 
-  Example generator:
+          <!-- ng-init="usermajor ? 'usermajor.name' : test"> -->
+
+  <!-- this div is for testing purposes and can be removed before Friday -->
+  <div data-ng-model="pitchText">{{pitchText}}</div>
+
+  Example:
   <div>
     <ul>
       <li>Okay: "I know some jQuery"</li>
