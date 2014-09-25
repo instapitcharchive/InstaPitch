@@ -8,19 +8,33 @@
   </section>
 </article>
 
-<div class="main-form">
+<div class="name">
 
   <form>
-    <input required data-ng-model="username" placeholder="Your name"/>
+    <input required data-ng-model="username" placeholder="Your name">  </form>
     You are a
+    <div class="custom-dropdown">
     <select required
             data-ng-model="usermajor"
             ng-options="major.name for major in majors"
             ng-init="usermajor ? 'usermajor.name' : test">
       <option value="">-- choose accelerator --</option>
     </select>
+  </div>
 
     developer
-  </form>
+
   <button data-ng-click="advanceToSkills()" data-ng-disabled="!usermajor">Next</button>
 </div>
+
+<!-- <h2 class="header" >Choose Your Track</h2>
+<span class="custom-dropdown">
+    <select>
+        <option>JavaScript</option>
+        <option>UX</option>
+        <option>Python</option>
+        <option>Ruby</option>
+        <option>Web Dev Full Stack</option>
+    </select>
+</span>
+<!-- end drop down menu test -->

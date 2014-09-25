@@ -28,3 +28,4 @@ bower_components
 # build
 test/angular-testbundle.js
 .DS_Store
+data
