@@ -6,10 +6,11 @@ module.exports = function(app) {
       $cookies.jwt = null;
     }
 
-    if(!$cookies.jwt || $cookies.jwt.length >= 10) {
+    //if no cookies.jwt OR cookies.jwt.length >= 10
+    /*if(!$cookies.jwt || $cookies.jwt.length >= 10) {
       return $location.path('/admin');
     }
-
+*/
 
     if($location.path() === '/signup') {
       $scope.newuser = true;
