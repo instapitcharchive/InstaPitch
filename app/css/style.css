@@ -3,6 +3,23 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
+  background-color: #669999;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  font: 2em 'Righteous', cursive;
+  text-align: center;
+  color: yellow;
+  opacity: .8;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /*HIDDEN ELEMENTS*/
@@ -13,50 +30,99 @@ html {
 /*HEADER WITH IMAGE AND APP DESCRIPTION*/
 
 
-article {
-  display: block;
-  position: relative;
-  margin: 0;
-  background-color: yellow;
-  background: url("../images/office_space.jpg") center no-repeat;
-  height: 500px;
+.content {
+  background-color: #669999;
+  padding: 20px 0em;
 }
 
-section {
-  display: inline-block;
+.about {
+  background-color: #CC6633;
   text-align: justify;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  right: 20%;
   color: #fff;
-  border: 5px solid #fff;
-  padding: 0em 1em;
+  width: 75%;
+  margin: 0 auto;
+  border: 3px solid #fff;
+  border-radius: 40px;
+  padding: 10px 10px;
   line-height: 1.2;
   font-size: 1em;
-  background-color: rgba(0, 50, 20, 0.5);
+/*  background-color: rgba(0, 50, 20, 0.5);*/
+  font-family: 'Lato', sans-serif, font-weight: 400;
 }
 
-.section-h2 {
+.about-p {
   text-align: center;
-  color: yellow;
-  opacity: .8;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-section p {
-  font-weight: 900;
+/*MAIN FORM USERNAME AND MAJOR DROPDOWN MENU*/
+
+.main-form {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #1abc9c;
+  border: 3px solid #fff;
+  border-radius: 40px;
+  color: #fff;
+  padding: 1em;
+  width: 75%;
 }
 
-/*MAIN FORM USERNAME AND MAJOR*/
-div.main-form {
-  margin-top: 10px;
-  padding-left: 6em;
+/*NAME TEXTBOX ONLY*/
+.main-form-name {
+  display: block;
+  padding-bottom: .5em;
+  text-align: center;
+}
+
+.main-form-name-input {
+  height: 50px;
+  width: 11em;
+  font-size: 2em;
+}
+
+/*DROPDOWN MENU ONLY*/
+
+select {
+  display: inline-block;
+  background-color: #28e1bd;
+  color: #fff;
+  padding: .5em;
+  padding-right: 3em;
+  border: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.main-container-dropdown-p {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+
+/*NEXT BUTTON ONLY*/
+.button-next {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #1ECD97;
+  border-radius: 40px;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 }
 
 /*FIXED HEADER BAR*/
 .top-bar {
+  overflow: hidden;
   color: white;
-  position: fixed;
   z-index: 2;
   width: 100%;
   text-transform: uppercase;
@@ -121,15 +187,17 @@ div.main-form {
 
 .pitchHelp {
   width:300px;
+}.pushDown {
+  height:60px;
 }
 
 .pitchWrite {
   border:1px solid red;
 }
 
-.pushDown {
+/*.pushDown {
   height:60px;
-}
+}*/
 
 /* skills select - should be relocated when skills selectors are added to this file */
 /* feel free to change/remove these to suit the final styling - mandi */
