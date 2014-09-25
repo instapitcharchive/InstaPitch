@@ -9,11 +9,17 @@ describe('AdminController', function() {
 
   beforeEach(angular.mock.module('pitchApp'));
 
-  beforeEach(angular.mock.inject(function($controller, $rootScope) {
+  beforeEach(angular.mock.inject(function($controller, $rootScope, $http, $cookies, $base64, $location, auth) {
     scope = $rootScope.$new();
-  //object that looks like skill object
     scope.skill = {skillBody: "testBody", skillType: {type: "testType"}};
     $controllerConstructor = $controller;
+
+    //create a user, save it, include with every request
+    //createNewUser();
+    //process env mongo url
+    //set it to a localhost test
+    //
+
   }));
 
   it('should able to create a new controller', function() {

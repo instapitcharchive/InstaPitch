@@ -10,10 +10,9 @@ Choose your 3 strongest skills and qualities:
   <form name="skillsForm" ng-submit="advanceToPitch()">
 
     <!-- this section is for major-specific skills (ios, ruby, etc) and general coding skills (debugging) -->
-    <div class="section-buttons-a skillsLeft">
+    <div class="skillsLeft">
       <h2>Coding Skills</h2>
-      <div data-ng-repeat="skill in skills | filterByMajor:usermajor">
-        <label class="checkbox">
+      <div data-ng-repeat="skill in skills | filterByMajor:usermajor" class="section-buttons-a">
         <input  type="checkbox"
                 value="{{skill.skillBody}}"
                 ng-change="checkboxSelect(skill)"
@@ -22,7 +21,7 @@ Choose your 3 strongest skills and qualities:
                 />
                 {{skill.skillBody}} ( {{skill.skillType}} )
       </div>
-
+    </div>
 
     <!-- this section is just for "personality" traits and soft skills -->
     <div class="skillsRight">

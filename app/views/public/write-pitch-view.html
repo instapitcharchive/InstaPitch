@@ -1,8 +1,3 @@
-
-
-
-
-
 <!-- <div class="pitchHelp">
   <h1>Incorporate your Strengths</h1>
 
@@ -15,7 +10,6 @@
 
 <div class="section-buttons-b" data-ng-repeat="userskill in userskills" ng-class="{testgreen:userskill.found}">
     {{userskill.skillBody}}
-
   </div>
 
   <!-- visual prompt -->
@@ -30,10 +24,6 @@
   <textarea rows=10 cols=40 data-ng-model="pitchText" data-ng-change="scanPitchText()" class="textarea-finalpitch">
   </textarea>
     <p class="write4">Sample Piece:</p>
-
-
-
-
 
 
 
@@ -52,11 +42,16 @@
 <!-- <div class="pitchWrite">
   <h1>Write your pitch!</h1> --> <!-- -->
   <!-- needs an ng-model and ng-change which calls a function -->
-  <!-- <input  data-ng-model="pitchText"
-          data-ng-change="scanPitchText()"
+  <input  data-ng-model="pitchText"
+          data-ng-change="updateTextBox()"
           class="pitchInput">
 
-  Example generator:
+          <!-- ng-init="usermajor ? 'usermajor.name' : test"> -->
+
+  <!-- this div is for testing purposes and can be removed before Friday -->
+  <div data-ng-model="pitchText">{{pitchText}}</div>
+
+  Example:
   <div>
     <ul>
       <li>Okay: "I know some jQuery"</li>

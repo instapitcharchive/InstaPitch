@@ -6,6 +6,11 @@ module.exports = function(app) {
 
     $scope.userskills = userInputService.get("userskills");
 
+    $scope.updateTextBox = function() {
+      $scope.scanPitchText();
+      $scope.savePitchText();
+    };
+
     //for every skill saved in userskills
     //scan all of pitchText for the index (position) of each key
     //if it's NOT -1, we know that skill word exiss and we should add a property "found"
@@ -18,6 +23,11 @@ module.exports = function(app) {
           $scope.userskills[key].found = false;
         }
       }
+    };
+
+    $scope.savePitchText = function() {
+      console.log("saving pitch text");
+      userInputService.set("pitchText",$scope.userPitch);
     };
   });
 };

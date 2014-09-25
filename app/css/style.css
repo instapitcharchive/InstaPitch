@@ -3,6 +3,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
+  font-family:sans-serif;
   background-color: #669999;
 }
 
@@ -466,3 +467,7 @@ textarea {
   clear:both;
 }
 
+.signoutAlign {
+  position:absolute;
+  right:15px;
+}
