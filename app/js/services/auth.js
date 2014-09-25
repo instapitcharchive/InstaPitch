@@ -5,7 +5,7 @@ module.exports = function(app) {
     var auth = {
       sendJWT: function() {
         if(!$cookies.jwt || $cookies.jwt.length < 10){
-          $location.path('/signin');
+          $location.path('/signin'); //bug
           return 'noauth';
         }
 
