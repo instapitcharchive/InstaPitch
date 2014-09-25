@@ -170,34 +170,281 @@ select {
   color:gray;
 }
 
-.green {
-    color: green;
+.green{
+ color:green;
 }
 
-/* main */
-.skillButton {
-  background-color:#ddd;
-  color:red;
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
-.pitchInput {
-  width:300px;
-  height:300px;
+html {
+  font: 1em/1.5 "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
 }
 
 .pitchHelp {
   width:300px;
-}.pushDown {
+}
+
+.pushDown {
   height:60px;
 }
 
-.pitchWrite {
-  border:1px solid red;
+.write4 {
+  font-size: 1.3em;
+  margin: 0em 0em 2em 2em;
 }
 
-/*.pushDown {
-  height:60px;
-}*/
+.write3 {
+  font-size: 1.3em;
+  margin: 0em 0em 0em 2em;
+}
+
+.write2{
+  font-size: 1.3em;
+  margin: 0em 0em 0em 2em;
+}
+
+.write {
+  font-size: 1em;
+  margin: 2em 0em 0em 2em;
+  background-color: purples;
+}
+
+header hgroup {
+  display: inline-block;
+  text-align: justify;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  color: #fff;
+  border: 5px solid #fff;
+  padding: 0em 1em;
+  line-height: 1.2;
+  font-size: 1em;
+  background-color: rgba(0, 50, 20, 0.3);
+
+}
+
+.name, .custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 0%;
+
+}
+
+.name, .custom-dropdown select  {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0 0 0 5em;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+option {
+  margin: 2 0 0 2em;
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.cust2elect[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.4);
+}
+/*MAIN*/
+.main-buttons {
+  text-align: center;
+}
+
+h2.main-buttons {
+  color: #342B56;
+}
+
+h3.main-buttons {
+  color: #BFAC36;
+  background-color: ;
+  margin-top: -1em;
+}
+
+/*BUTTON STYLE*/
+
+li {
+  list-style-type: none;
+}
+
+.section-buttons{
+  margin-top: 4em;
+
+}
+.section-buttons-a {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background: #35292D;
+  width: 10em;
+    /* Font styles */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.section-buttons-b {
+ display: inline-block;
+  padding: 10px;
+  margin: 2em 0em 0em 2em;
+  background: #35292D;
+  width: 10em;
+    /* Font styles */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.testgreen {
+ display: inline-block;
+  padding: 10px;
+  margin: 2em 0em 0em 2em;
+  background-color: blue;
+  width: 10em;
+    /* Font styles */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lmargin {
+  margin: 0em 0em -1em 1.2em;
+}
+
+.b {
+ width: 10em;
+}
+
+textarea {
+  font-size: 1em;
+  margin-top: 0em;
+}
+
+
+
+.section-buttons-a:hover {
+  background: #725963;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-buttons-b:hover {
+  background: #725963;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-buttons-c:hover {
+  background: #725963;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*Text Box*/
+
+.textarea-finalpitch{
+  background-color:;
+  margin: 3em 2em 2em 2em;
+  padding-left: 4em;
+}
+
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content:"";
+  display:table;
+}
+.group:after {
+  clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+  width: 100%;
+}
+.span_2_of_3 {
+  width: 66.1%;
+}
+.span_1_of_3 {
+  width: 32.2%;
+}
+
+.push {
+  margin-top: 5em;
+  height: 5em;
+}
+
 
 /* skills select - should be relocated when skills selectors are added to this file */
 /* feel free to change/remove these to suit the final styling - mandi */
@@ -218,3 +465,4 @@ select {
 .skillsNext {
   clear:both;
 }
+
