@@ -1,60 +1,25 @@
+/*General Styles*/
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
 html {
-  background-color:#ddd;
+  font: 1em/1.5 "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
-  font-family:sans-serif;
 }
 
-/*HIDDEN ELEMENTS*/
-.isHidden {
-  display: none;
+body {
+  font-size: 1.3em;
 }
 
-/*HEADER WITH IMAGE AND APP DESCRIPTION*/
 
 
-article {
-  display: block;
-  position: relative;
-  margin: 0;
-  background-color: yellow;
-  background: url("../images/office_space.jpg") center no-repeat;
-  height: 500px;
-}
-
-section {
-  display: inline-block;
-  text-align: justify;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  right: 20%;
-  color: #fff;
-  border: 5px solid #fff;
-  padding: 0em 1em;
-  line-height: 1.2;
-  font-size: 1em;
-  background-color: rgba(0, 50, 20, 0.5);
-}
-
-.section-h2 {
-  text-align: center;
-  color: yellow;
-  opacity: .8;
-}
-
-section p {
-  font-weight: 900;
-}
-
-/*MAIN FORM USERNAME AND MAJOR*/
-div.main-form {
-  margin-top: 10px;
-  padding-left: 6em;
-}
-
-/*FIXED HEADER BAR*/
+/*header*/
 .top-bar {
   color: white;
   position: fixed;
@@ -89,78 +54,25 @@ div.main-form {
   color: orange;
 }
 
-/* CMS */
-.skillBox {
-  background-color:#eee;
-  border:1px solid gray;
-  margin:10px;
-  padding:10px;
-}
 
-.redText {
-  color:red;
-}
+/*main*/
 
-.skillTypeText {
-  color:gray;
-}
-
-.green{
- color:green;
-}
-
-html, body {
-  padding: 0;
+article {
+  display: block;
+  position: relative;
   margin: 0;
-  height: 100%;
+  background-color: yellow;
+  background: url("../images/office_space.jpg") center no-repeat;
+  height: 500px;
 }
 
+.about{}
 
+.content{}
 
-html {
-  font: 1em/1.5 "Lato", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
-}
+/*floated section*/
 
-
-body {
-  font-size: 1.3em;
-}
-h2.hgroup {
-  text-align: center;
-  color: ;
-  opacity: .8;
-}
-
-.write4 {
-  font-size: 1.3em;
-  margin: 0em 0em 2em 2em;
-
-}
-
-.write3 {
-  font-size: 1.3em;
-  margin: 0em 0em 0em 2em;
-
-}
-
-.write2{
-font-size: 1.3em;
-margin: 0em 0em 0em 2em;
-
-
-}
-
-
-.write {
-  font-size: 1em;
-  margin: 2em 0em 0em 2em;
-  background-color: purples;
-}
-
-header hgroup {
+section {
   display: inline-block;
   text-align: justify;
   position: absolute;
@@ -172,9 +84,28 @@ header hgroup {
   padding: 0em 1em;
   line-height: 1.2;
   font-size: 1em;
-  background-color: rgba(0, 50, 20, 0.3);
-
+  background-color: rgba(0, 50, 20, 0.5);
 }
+
+
+.section-h2 {
+  text-align: center;
+  color: yellow;
+  opacity: .8;
+}
+
+section p {
+  font-weight: 900;
+}
+
+h2.hgroup {
+  text-align: center;
+  color: ;
+  opacity: .8;
+}
+
+
+/*dropdown*/
 
 .name, .custom-dropdown {
   position: relative;
@@ -232,7 +163,6 @@ option {
   color: rgba(0,0,0,.3);
 }
 
-
 .custom-dropdown select[disabled]::after {
   color: rgba(0,0,0,.1);
 }
@@ -244,7 +174,11 @@ option {
 .custom-dropdown::after {
   color: rgba(0,0,0,.4);
 }
-/*MAIN*/
+
+/*nav*/
+
+/*button column*/
+
 .main-buttons {
   text-align: center;
 }
@@ -259,9 +193,10 @@ h3.main-buttons {
   margin-top: -1em;
 }
 
-/*BUTTON STYLE*/
+.b {
+ width: 10em;
 
-li {
+ li {
   list-style-type: none;
 }
 
@@ -274,52 +209,12 @@ li {
   padding: 10px;
   margin: 10px;
   background: #35292D;
-  width: 10em;
-    /* Font styles */
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-
-}
-
-.section-buttons-b {
- display: inline-block;
-  padding: 10px;
-  margin: 2em 0em 0em 2em;
-  background: #35292D;
-  width: 10em;
+  width: 20em;
     /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
-
-.testgreen {
- display: inline-block;
-  padding: 10px;
-  margin: 2em 0em 0em 2em;
-  background-color: blue;
-  width: 10em;
-    /* Font styles */
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.lmargin {
-  margin: 0em 0em -1em 1.2em;
-}
-
-.b {
- width: 10em;
-}
-
-textarea {
-  font-size: 1em;
-  margin-top: 0em;
-}
-
-
 
 .section-buttons-a:hover {
   background: #725963;
@@ -328,28 +223,28 @@ textarea {
   text-decoration: none;
 }
 
-.section-buttons-b:hover {
-  background: #725963;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+
+/*writecolumn*/
+
+.write {
+  font-size: 1em;
+  margin-right: 50em 10em 10em 10em;
 }
 
-.section-buttons-c:hover {
-  background: #725963;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+
+/*textbox*/
+.pitchWrite{
+
 }
 
-/*Text Box*/
-
-.textarea-finalpitch{
-  background-color:;
-  margin: 3em 2em 2em 2em;
-  padding-left: 4em;
+/*HIDDEN ELEMENTS*/
+.isHidden {
+  display: none;
 }
 
+
+
+/*Skeleton styles below*/
 
 /*  COLUMN SETUP  */
 .col {
@@ -384,19 +279,49 @@ textarea {
   width: 32.2%;
 }
 
-.pushDown {
-  height:60px;
+/*Admin*/
+.skillBox {
+  background-color:#eee;
+  border:1px solid gray;
+  margin:10px;
+  padding:10px;
 }
 
-.push {
-  margin-top: 5em;
-  height: 5em;
+.redText {
+  color:red;
+}
+
+.skillTypeText {
+  color:gray;
 }
 
 
-/* skills select - should be relocated when skills selectors are added to this file */
+/*html {
+  background-color:#ddd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}*/
+
+/*MAIN FORM USERNAME AND MAJOR
+div.main-form {
+  margin-top: 10px;
+  padding-left: 6em;
+}
+*/
+/*FIXED HEADER BAR*/
+
+
+/* CMS */
+/*
+*/
+
+/*General styles */
+
+
+/*/* skills select - should be relocated when skills selectors are added to this file */
 /* feel free to change/remove these to suit the final styling - mandi */
-.skillsLeft {
+/*.skillsLeft {
   border:1px solid blue;
   width:45%;
   display:block;
@@ -414,7 +339,3 @@ textarea {
   clear:both;
 }
 
-.signoutAlign {
-  position:absolute;
-  right:15px;
-}
