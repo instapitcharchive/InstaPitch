@@ -7,8 +7,8 @@
           </select>
 
   <!-- warning labels-->
-  <label data-ng-show="newskillform.$dirty && newskillform.$invalid" class="redText">Skill can't be blank
+  <label data-ng-show="newskillform.$dirty && newskillform.$invalid" class="redText">Adding a new skill: skill can't be blank
     </label>
-  <button data-ng-disabled="newskillform.$invalid" data-ng-click="saveNewSkill()">Save Skill</button>
+  <button data-ng-disabled="newskillform.$invalid" data-ng-click="saveNewSkill(newskillform)">Save Skill</button>
 
 </form>

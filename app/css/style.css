@@ -3,6 +3,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
+  font-family:sans-serif;
 }
 
 /*HIDDEN ELEMENTS*/

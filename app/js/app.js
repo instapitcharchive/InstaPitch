@@ -22,6 +22,7 @@ require('./controllers/write-pitch-controller')(pitchApp);
 require('./controllers/users-controller')(pitchApp);
 
 //services
+require('./services/auth')(pitchApp);
 require('./services/skills-server')(pitchApp);
 require('./services/user-input-service')(pitchApp);
 

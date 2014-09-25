@@ -7,17 +7,19 @@ var http = require('http');
 var passport = require('passport');
 var app = express();
 
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/skills-development');
+
 app.use(express.static(__dirname + '/build'));
 
-app.set('jwtTokenSecret', process.env.JWT_SECRET || 'developmentsecret');
-app.set('secret', process.env.SECRET || 'developmentsecret'); //passport requires this, but we don't actually use it
+//get instead of
+app.set('jwtTokenSecret', process.env.JWT_SECRET || 'instapitchsecrettoken12345');
+console.log('jwtTokenSecret is (server.js) ' + app.get('jwtTokenSecret'));
+app.set('secret', process.env.SECRET || 'instapitchsecrettoken12345'); //passport requires this, but we don't actually use it
 
 app.use(passport.initialize());
 
 require('./lib/passport')(passport);
 var jwtauth = require('./lib/jwtauth')(app);
-
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/skills-development');
 
 app.use(bodyparser.json());
 require('./routes/user-routes')(app, passport);
