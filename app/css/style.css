@@ -151,3 +151,8 @@ div.main-form {
 .skillsNext {
   clear:both;
 }
+
+.signoutAlign {
+  position:absolute;
+  right:15px;
+}

@@ -42,7 +42,7 @@ module.exports = function(app) {
       })
 
       .when('/signout', {
-        templateUrl: 'views/users/loggedout.html',
+        templateUrl: 'views/users/users.html',
         controller: 'usersController'
       })
 
