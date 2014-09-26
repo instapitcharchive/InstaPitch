@@ -447,8 +447,7 @@ textarea {
 }
 
 
-/* skills select - should be relocated when skills selectors are added to this file */
-/* feel free to change/remove these to suit the final styling - mandi */
+/* CMS */
 .skillsLeft {
   border:1px solid blue;
   width:45%;
@@ -473,6 +472,7 @@ textarea {
 }
 
 .cmsBackground {
+  padding-top:10px;
   background-color:#ddd !important;
 }
 

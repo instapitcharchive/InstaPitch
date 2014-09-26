@@ -1,19 +1,18 @@
 <div class="pushDown"></div>
-
-<div data-ng-controller="adminController">
-  <div class="signoutAlign"><a href="#/signout">Sign out</a></div>
-  <!--new skill form here-->
-  Add a new skill/trait:
-  <div data-new-skill-form></div>
-
-
-  <!-- for each skill, make a div -->
-  <div data-ng-repeat="skill in skills" class="skillBox">
-    <!-- edit template is handled by a directive-->
-      <div data-edit-skill-form></div>
-  </div><!-- closes skill in skills skillBox-->
+  <div class="cmsBackground">
+    <div data-ng-controller="adminController">
+      <div class="signoutAlign"><a href="#/signout">Sign out</a></div>
+      <!--new skill form here-->
+      Add a new skill/trait:
+      <div data-new-skill-form></div>
+      <!-- for each skill, make a div -->
+      <div data-ng-repeat="skill in skills" class="skillBox">
+        <!-- edit template is handled by a directive-->
+          <div data-edit-skill-form></div>
+      </div><!-- closes skill in skills skillBox-->
 
 
-  <button data-ng-click="deleteAll()">Delete All</button>
+      <button data-ng-click="deleteAll()">Delete All</button>
 
-</div> <!-- Closes adminController -->
+    </div> <!-- Closes adminController -->
+  </div>
