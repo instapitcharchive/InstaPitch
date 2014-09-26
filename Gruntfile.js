@@ -69,7 +69,7 @@ module.exports = function(grunt) {
       },
       express: {
         files: ['app/js/**/*.js', 'models/*.*', 'routes/*.*', 'app/index.html', 'app/views/**/*.html', 'app/css/*.css', 'app/views/**/*.html', 'server.js', 'models/*.js'],
-        tasks: ['test','build'],
+        tasks: ['build'],
         options: {
           spawn: false
         }
