@@ -214,12 +214,12 @@ html {
 }
 
 .write2{
-  font-size: 1.3em;
+  font-size: 2em;
   margin: 0em 0em 0em 2em;
 }
 
 .write {
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 2em 0em 0em 2em;
   background-color: purples;
 }
@@ -342,6 +342,7 @@ li {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 10px;
 
 }
 
@@ -354,13 +355,14 @@ li {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 10px;
 }
 
 .testgreen {
  display: inline-block;
   padding: 10px;
   margin: 2em 0em 0em 2em;
-  background-color: blue;
+  background-color: #BFAC36;
   width: 10em;
   color: white;
   font-weight: bold;
@@ -378,29 +380,33 @@ li {
 textarea {
   font-size: 1em;
   margin-top: 0em;
+  border-radius: 20px;
 }
 
 
 
 .section-buttons-a:hover {
-  background: #725963;
+  background: #BFAC36;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 .section-buttons-b:hover {
-  background: #725963;
+  background: #BFAC363;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 .section-buttons-c:hover {
-  background: #725963;
+  background: #BFAC36;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 /*Text Box*/
@@ -492,7 +498,7 @@ textarea {
 }
 
 .checked {
-  background: #CC6633;
+  background: #BFAC36;
 }
 
 /*
