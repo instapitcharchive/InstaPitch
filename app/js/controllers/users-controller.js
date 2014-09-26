@@ -31,6 +31,7 @@ module.exports = function(app) {
     };
 
     $scope.createNewUser = function() {
+      console.log("making a user");
       $http({
         method: 'POST',
         url: '/api/v_0_0_1/users',

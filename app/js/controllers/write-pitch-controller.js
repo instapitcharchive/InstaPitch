@@ -13,7 +13,7 @@ module.exports = function(app) {
 
     //for every skill saved in userskills
     //scan all of pitchText for the index (position) of each key
-    //if it's NOT -1, we know that skill word exiss and we should add a property "found"
+    //if it's NOT -1, we know that skill word exists and we should add a property "found"
     //otherwise, make the skill's found property false because it doesn't exist (currently)
     $scope.scanPitchText = function() {
       for (var key in $scope.userskills) {

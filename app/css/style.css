@@ -86,7 +86,7 @@ p {
 
 /*DROPDOWN MENU ONLY*/
 
-select {
+.main-page-select {
   display: inline-block;
   background-color: #28e1bd;
   color: #fff;
@@ -471,3 +471,9 @@ textarea {
   position:absolute;
   right:15px;
 }
+
+.cmsBackground {
+  background-color:#ddd !important;
+}
+
+

@@ -2,7 +2,7 @@
 require('../../app/js/app.js');
 require('angular-mocks');
 
-describe('AdminController', function() {
+describe('adminController', function() {
   var $controllerConstructor;
   var $httpBackend;
   var scope;
@@ -11,14 +11,17 @@ describe('AdminController', function() {
 
   beforeEach(angular.mock.inject(function($controller, $rootScope, $http, $cookies, $base64, $location, auth) {
     scope = $rootScope.$new();
+    console.log("scope is: " + scope);
     scope.skill = {skillBody: "testBody", skillType: {type: "testType"}};
     $controllerConstructor = $controller;
 
-    //create a user, save it, include with every request
-    //createNewUser();
-    //process env mongo url
-    //set it to a localhost test
-    //
+    //create a user, save it
+    scope.testUser = {email:'test', password:'test'};
+    scope.createNewUser();
+    console.log("testUser is: " + scope.testUser);
+    //include with every request
+    //do something with process env mongo url
+    //set it to a localhost test?
 
   }));
 
