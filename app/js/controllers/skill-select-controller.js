@@ -29,7 +29,7 @@ module.exports = function(app) {
 
     $scope.checkboxSelect = function(input) {
       console.log("selecting a checkbox: " + input.skillBody);
-
+      input.checked = !input.checked;
       if ($scope.skillsSelected[input.skillBody] == input) { //if this skill is already in the object
         $scope.skillsSelectedNum -= 1;
         delete $scope.skillsSelected[input.skillBody]; //remove it from object

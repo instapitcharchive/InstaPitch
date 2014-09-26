@@ -4,17 +4,17 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
   font-family:sans-serif;
-  background-color: #669999;
+  background-color: #E2E2E2;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family:'Raleway', sans-serif;;
 }
 
 h2 {
-  font: 2em 'Righteous', cursive;
+  font: 2em 'Source Sans Pro', sans-serif;
   text-align: center;
-  color: yellow;
+  color: black;
   opacity: .8;
 }
 
@@ -32,12 +32,12 @@ p {
 
 
 .content {
-  background-color: #669999;
+  background-color: #E2E2E2;
   padding: 20px 0em;
 }
 
 .about {
-  background-color: #CC6633;
+  background-color: #35292D;
   text-align: justify;
   color: #fff;
   width: 75%;
@@ -47,8 +47,8 @@ p {
   padding: 10px 10px;
   line-height: 1.2;
   font-size: 1em;
-/*  background-color: rgba(0, 50, 20, 0.5);*/
-  font-family: 'Lato', sans-serif, font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
 }
 
 .about-p {
@@ -126,25 +126,27 @@ p {
   color: white;
   z-index: 2;
   width: 100%;
-  text-transform: uppercase;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+
+  background: white;
 }
 
 .top-bar-logo-insta {
   text-align: center;
-  font: 1em "Silverfake";
+  font: 1em "Raleway";
   display: block;
   float:left;
-  margin: 1% 0 0 1%;
+  margin: 1% 0 0 0%;
 }
 
 .top-bar-logo-pitch {
     text-align: center;
-    font: 2em "Average", serif;
+    font: 2em "Raleway", serif;
 }
 .top-bar a {
-  color: white;
+  color: #35292D;
+  font: 5em "Oswald";
   text-decoration: none;
+  margin-left: 2em;
 }
 
 .nav-admin {
@@ -152,7 +154,12 @@ p {
   margin-right: 1em;
 }
 .nav-admin a {
-  color: orange;
+
+}
+
+.w {
+  color: #1abc9c;
+  font: 5em "Oswald";
 }
 
 /* CMS */
@@ -182,7 +189,7 @@ html, body {
 }
 
 html {
-  font: 1em/1.5 "Lato", sans-serif;
+  font: 1em/1.5 "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
@@ -207,12 +214,12 @@ html {
 }
 
 .write2{
-  font-size: 1.3em;
+  font-size: 2em;
   margin: 0em 0em 0em 2em;
 }
 
 .write {
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 2em 0em 0em 2em;
   background-color: purples;
 }
@@ -332,10 +339,10 @@ li {
   margin: 10px;
   background: #35292D;
   width: 10em;
-    /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 10px;
 
 }
 
@@ -345,19 +352,18 @@ li {
   margin: 2em 0em 0em 2em;
   background: #35292D;
   width: 10em;
-    /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 10px;
 }
 
 .testgreen {
  display: inline-block;
   padding: 10px;
   margin: 2em 0em 0em 2em;
-  background-color: blue;
+  background-color: #BFAC36;
   width: 10em;
-    /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -374,29 +380,33 @@ li {
 textarea {
   font-size: 1em;
   margin-top: 0em;
+  border-radius: 20px;
 }
 
 
 
 .section-buttons-a:hover {
-  background: #725963;
+  background: #BFAC36;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 .section-buttons-b:hover {
-  background: #725963;
+  background: #BFAC363;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 .section-buttons-c:hover {
-  background: #725963;
+  background: #BFAC36;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 20px;
 }
 
 /*Text Box*/
@@ -430,20 +440,33 @@ textarea {
     zoom:1; /* For IE 6/7 */
 }
 
-/*  GRID OF THREE  */
-.span_3_of_3 {
-  width: 100%;
-}
-.span_2_of_3 {
-  width: 66.1%;
-}
-.span_1_of_3 {
-  width: 32.2%;
+
+/*MAIN SKILLS SELECTION PAGE*/
+
+.skills-buttons {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  height: 50px;
+  border: 2px solid #1ECD97;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  text-align: center;
+  background: #1abc9c;
+  color: #fff;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 }
 
-.push {
-  margin-top: 5em;
-  height: 5em;
+.checked {
+  background: #BFAC36;
+}
+
+.footer-total {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
 }
 
 
@@ -455,15 +478,59 @@ textarea {
   float:left;
 }
 
-.skillsRight {
-  border:1px solid red;
-  width:45%;
-  display:block;
-  float:left;
+/*  SECTIONS  */
+.skillsection {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
 }
 
-.skillsNext {
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.skillgroup:before,
+.skillgroup:after {
+  content:"";
+  display:table;
+}
+.skillgroup:after {
   clear:both;
+}
+.skillgroup {
+    zoom:1; /* For IE 6/7 */
+}
+
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+  width: 100%;
+}
+.span_1_of_2 {
+  width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .span_2_of_2 {
+    width: 100%;
+  }
+  .span_1_of_2 {
+    width: 100%;
+  }
 }
 
 .signoutAlign {
