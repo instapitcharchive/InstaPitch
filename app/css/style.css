@@ -47,8 +47,8 @@ p {
   padding: 10px 10px;
   line-height: 1.2;
   font-size: 1em;
-/*  background-color: rgba(0, 50, 20, 0.5);*/
-  font-family: 'Lato', sans-serif, font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
 }
 
 .about-p {
@@ -440,59 +440,21 @@ textarea {
     zoom:1; /* For IE 6/7 */
 }
 
-/*  GRID OF THREE  */
-/*.span_3_of_3 {
-  width: 100%;
-}
-.span_2_of_3 {
-  width: 66.1%;
-}
-.span_1_of_3 {
-  width: 32.2%;
-}
-
-.push {
-  margin-top: 5em;
-  height: 5em;
-}*/
-
-
-/* skills select - should be relocated when skills selectors are added to this file */
-/* feel free to change/remove these to suit the final styling - mandi */
-/*.skillsLeft {
-  border:1px solid blue;
-  width:45%;
-  display:block;
-  float:left;
-}
-
-.skillsRight {
-  border:1px solid red;
-  width:45%;
-  display:block;
-  float:left;
-}
-
-.skillsNext {
-  clear:both;
-}
-*/
-
 
 /*MAIN SKILLS SELECTION PAGE*/
 
 .skills-buttons {
-  /*display: block;*/
-  /*margin: 0 auto;*/
+  display: block;
+  margin: 20px auto;
   width: 300px;
   height: 50px;
   border: 2px solid #1ECD97;
   border-radius: 40px;
   letter-spacing: 1px;
   font-size: 1.25em;
+  text-align: center;
   background: #1abc9c;
   color: #fff;
-
   -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 }
@@ -501,12 +463,12 @@ textarea {
   background: #BFAC36;
 }
 
-/*
-input[type="checkbox"]
-{
-    visibility: hidden;
+.footer-total {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
 }
-*/
+
 /*  SECTIONS  */
 .skillsection {
   clear: both;
