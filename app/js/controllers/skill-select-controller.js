@@ -33,11 +33,9 @@ module.exports = function(app) {
       if ($scope.skillsSelected[input.skillBody] == input) { //if this skill is already in the object
         $scope.skillsSelectedNum -= 1;
         delete $scope.skillsSelected[input.skillBody]; //remove it from object
-        console.log("removing " + input.skillBody);
       } else { //add it to the object
         $scope.skillsSelectedNum += 1;
         $scope.skillsSelected[input.skillBody] = input;
-        console.log("adding " + input.skillBody + " to $scope.skillsSelected: " + $scope.skillsSelected[input.skillBody]["skillBody"]);
       }
     };
   });

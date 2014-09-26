@@ -30,6 +30,22 @@ module.exports = function(app) {
         controller: 'writePitchController'
       })
 
+      //admin auth
+      .when('/signin', {
+      templateUrl: 'views/users/users.html',
+      controller: 'usersController'
+      })
+
+      .when('/signup', {
+        templateUrl: 'views/users/users.html',
+        controller: 'usersController'
+      })
+
+      .when('/signout', {
+        templateUrl: 'views/users/users.html',
+        controller: 'usersController'
+      })
+
       //default to main
       .otherwise({
         redirectTo: '/'
