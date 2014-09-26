@@ -332,7 +332,6 @@ li {
   margin: 10px;
   background: #35292D;
   width: 10em;
-    /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -345,7 +344,6 @@ li {
   margin: 2em 0em 0em 2em;
   background: #35292D;
   width: 10em;
-    /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -357,7 +355,6 @@ li {
   margin: 2em 0em 0em 2em;
   background-color: blue;
   width: 10em;
-    /* Font styles */
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -431,7 +428,7 @@ textarea {
 }
 
 /*  GRID OF THREE  */
-.span_3_of_3 {
+/*.span_3_of_3 {
   width: 100%;
 }
 .span_2_of_3 {
@@ -444,12 +441,12 @@ textarea {
 .push {
   margin-top: 5em;
   height: 5em;
-}
+}*/
 
 
 /* skills select - should be relocated when skills selectors are added to this file */
 /* feel free to change/remove these to suit the final styling - mandi */
-.skillsLeft {
+/*.skillsLeft {
   border:1px solid blue;
   width:45%;
   display:block;
@@ -465,6 +462,91 @@ textarea {
 
 .skillsNext {
   clear:both;
+}
+*/
+
+
+/*MAIN SKILLS SELECTION PAGE*/
+
+.skills-buttons {
+  /*display: block;*/
+  /*margin: 0 auto;*/
+  width: 300px;
+  height: 50px;
+  border: 2px solid #1ECD97;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  background: #1abc9c;
+  color: #fff;
+
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.checked {
+  background: #CC6633;
+}
+
+/*
+input[type="checkbox"]
+{
+    visibility: hidden;
+}
+*/
+/*  SECTIONS  */
+.skillsection {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.skillgroup:before,
+.skillgroup:after {
+  content:"";
+  display:table;
+}
+.skillgroup:after {
+  clear:both;
+}
+.skillgroup {
+    zoom:1; /* For IE 6/7 */
+}
+
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+  width: 100%;
+}
+.span_1_of_2 {
+  width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .span_2_of_2 {
+    width: 100%;
+  }
+  .span_1_of_2 {
+    width: 100%;
+  }
 }
 
 .signoutAlign {

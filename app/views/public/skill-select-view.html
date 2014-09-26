@@ -1,48 +1,36 @@
+<main class="main-skills">
+  <p class="about-p">Welcome {{username}}, {{usermajor.name}} developer extraordinaire.
+  </p>
+  <h2 class="main-skills-h2">Choose your 3 strongest skills and qualities:
+  </h2>
+<form name="skillsForm" ng-submit="advanceToPitch()">
+<div class="skillsection skillgroup">
+  <section class="skillsLeft col span_1_of_2">
+    <h2>Coding Skills</h2>
+    <div data-ng-repeat="skill in skills | filterByMajor:usermajor" class="skills-buttons {{skill.checked ? 'checked' : ''}}" ng-click="checkboxSelect(skill)">
+      {{skill.skillBody}} ( {{skill.skillType}} )
 
-
-<div class="red">
-  <p>blah</p>
-  </div>
-Welcome {{username}}, {{usermajor.name}} developer extraordinaire.
-</br></br>
-Choose your 3 strongest skills and qualities:
-
-  <form name="skillsForm" ng-submit="advanceToPitch()">
-
-    <!-- this section is for major-specific skills (ios, ruby, etc) and general coding skills (debugging) -->
-    <div class="skillsLeft">
-      <h2>Coding Skills</h2>
-      <div data-ng-repeat="skill in skills | filterByMajor:usermajor" class="section-buttons-a">
-        <input  type="checkbox"
-                value="{{skill.skillBody}}"
-                ng-change="checkboxSelect(skill)"
-                ng-model="skill.checked"
-                name="group-skills"
-                />
-                {{skill.skillBody}} ( {{skill.skillType}} )
-      </div>
     </div>
+  </section> <!-- closes skillsLeft -->
 
-    <!-- this section is just for "personality" traits and soft skills -->
-    <div class="skillsRight">
-      <h2>Soft Skills & Personal Traits</h2>
-      <div data-ng-repeat="skill in skills | filterByTrait">
-        <label class="checkbox">
-        <input  type="checkbox"
-                value="{{skill.skillBody}}"
-                ng-change="checkboxSelect(skill)"
-                ng-model="skill.checked"
-                name="group-skills"
-                />
-                {{skill.skillBody}} ( {{skill.skillType}} )
-      </div>
+  <section class="traitsRight col span_1_of_2">
+    <h2>Personal Traits</h2>
+    <div data-ng-repeat="skill in skills | filterByTrait:usertrait" class="skills-buttons">
+      <input  type="checkbox"
+      value="{{skill.skillBody}}"
+      ng-change="checkboxSelect(skill)"
+      ng-model="skill.checked"
+      name="group-skills" class="skil-but"
+      />
+      {{skill.skillBody}} ( {{skill.skillType}} )
     </div>
+  </section> <!-- closes traitsRight -->
+</div> <!-- closes skillsection skillgroup div -->
 
-    <!-- input button is disabled until (any) three skills are selected -->
-    <div class="skillsNext">
-    <input type="submit" value="Next" ng-disabled="skillsSelectedNum != 3"/>
-    </div>
-
-  </form>
   total checked: {{ skillsSelectedNum }}
-</div> <!-- closes admin-wrapper div -->
+
+    <div class="skillsNext">
+    <input type="submit" value="Next" ng-disabled="skillsSelectedNum != 3" class="button-next"/>
+    </div>
+</form>
+</main> <!-- closes main-skills -->
