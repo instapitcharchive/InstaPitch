@@ -9,7 +9,7 @@
     <h2>Coding Skills</h2>
     <div data-ng-repeat="skill in skills | filterByMajor:usermajor" class="skills-buttons {{skill.checked ? 'checked' : ''}}" ng-click="checkboxSelect(skill)">
       {{skill.skillBody}} </br>
-      ( {{skill.skillType}} )
+      <!--( {{skill.skillType}} )-->
 
     </div>
   </section> <!-- closes skillsLeft -->
@@ -18,7 +18,7 @@
     <h2>Personal Traits</h2>
     <div data-ng-repeat="skill in skills | filterByTrait" class="skills-buttons {{skill.checked ? 'checked' : ''}}" ng-click="checkboxSelect(skill)">
       {{skill.skillBody}} </br>
-      ( {{skill.skillType}} )
+      <!--( {{skill.skillType}} )-->
 
     </div>
   </section> <!-- closes traitsRight -->
