@@ -8,27 +8,26 @@
   <section class="skillsLeft col span_1_of_2">
     <h2>Coding Skills</h2>
     <div data-ng-repeat="skill in skills | filterByMajor:usermajor" class="skills-buttons {{skill.checked ? 'checked' : ''}}" ng-click="checkboxSelect(skill)">
-      {{skill.skillBody}} ( {{skill.skillType}} )
+      {{skill.skillBody}} </br>
+      ( {{skill.skillType}} )
 
     </div>
   </section> <!-- closes skillsLeft -->
 
-  <section class="traitsRight col span_1_of_2">
+   <section class="skillsLeft col span_1_of_2">
     <h2>Personal Traits</h2>
-    <div data-ng-repeat="skill in skills | filterByTrait:usertrait" class="skills-buttons">
-      <input  type="checkbox"
-      value="{{skill.skillBody}}"
-      ng-change="checkboxSelect(skill)"
-      ng-model="skill.checked"
-      name="group-skills" class="skil-but"
-      />
-      {{skill.skillBody}} ( {{skill.skillType}} )
+    <div data-ng-repeat="skill in skills | filterByTrait" class="skills-buttons {{skill.checked ? 'checked' : ''}}" ng-click="checkboxSelect(skill)">
+      {{skill.skillBody}} </br>
+      ( {{skill.skillType}} )
+
     </div>
   </section> <!-- closes traitsRight -->
+
 </div> <!-- closes skillsection skillgroup div -->
 
-  total checked: {{ skillsSelectedNum }}
-
+<footer class="footer-total">
+  Total Checked: {{ skillsSelectedNum }}
+</footer>
     <div class="skillsNext">
     <input type="submit" value="Next" ng-disabled="skillsSelectedNum != 3" class="button-next"/>
     </div>
